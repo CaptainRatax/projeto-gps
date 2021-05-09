@@ -41,6 +41,76 @@
 
 /*HOMEPAGE*/
 
+.conteudoDentroBackground {
+    top: 50%;
+    left: 50%;
+    padding-top: 12.5%;
+    text-align: center;
+}
+
+.tituloHomePage {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 450%;
+    color: rgba(255, 255, 255, 1);
+}
+
+.subtituloHomePage {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 170%;
+    color: rgba(255, 255, 255, 1);
+    margin: 10px;
+}
+
+.divBotaoCandidatate {
+    text-align: center;
+    margin: 40px;
+}
+
+a.btn.btn-primary.botaoCandidatate {
+    color: #fff;
+    background-color: #459bb9;
+    border-color: #459bb9;
+    white-space: nowrap;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.row.botoesExtrasHome {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.jumbotron {
+    background-image: url(./Images/homeBackground1080p.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0%;
+}
+
+.areaSobre {
+    margin-top: 80px;
+}
+
+.tituloSobreHome {
+    margin-left: 8%;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.row.areaTextoSobre {
+    margin-top: 80px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.col-md-7.textoSobre {
+    margin-top: 60px;
+}
+
 
 /*CANDIDATURAS*/
 
