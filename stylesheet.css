@@ -168,6 +168,45 @@ button.btn.btn-primary.enviarCandidatura {
 
 /*CONTACTOS*/
 
+.areaContactos {
+    margin-top: 60px;
+}
+
+.tituloContactos {
+    margin-left: 8%;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.row.conteudoContactos {
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.tituloItemContacto {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.itemContacto {
+    margin-bottom: 15px;
+}
+
+.areaMorada {
+    margin-top: 10px;
+    float: left;
+}
+
+.areaMorada .location-pinContactos {
+    margin-right: 20px;
+    float: left;
+}
+
+.areaMorada .moradaContactos {
+    float: right;
+}
+
 
 /*GERAL*/
 
