@@ -114,6 +114,54 @@ a.btn.btn-primary.botaoCandidatate {
 
 /*CANDIDATURAS*/
 
+.inputsCandidatura ::placeholder {
+    font-weight: lighter;
+    color: rgb(196, 196, 196);
+}
+
+.inputsCandidatura label {
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+.areaCandidaturas {
+    margin-top: 60px;
+}
+
+.tituloCandidaturas {
+    margin-left: 8%;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.row.camposCandidaturas {
+    margin-top: 80px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.campoDescricaoCandidatura {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+button.btn.btn-primary.enviarCandidatura {
+    color: #fff;
+    background-color: #459bb9;
+    border-color: #459bb9;
+    white-space: nowrap;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.divEnviarCandidatura {
+    float: right;
+    margin-right: 10.5%;
+    margin-top: 60px;
+}
+
 
 /*BLOG*/
 
