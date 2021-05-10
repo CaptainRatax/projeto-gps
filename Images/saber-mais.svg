@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="132" height="149.5" viewBox="0 0 132 149.5">
+                    <g id="info" transform="translate(11.15)">
+                      <path id="Caminho_20" data-name="Caminho 20" d="M54.35,108.7A54.351,54.351,0,0,1,15.919,15.919,54.351,54.351,0,0,1,92.782,92.782,54,54,0,0,1,54.35,108.7Z" transform="translate(0)" fill="#005e86"/>
+                      <path id="Caminho_21" data-name="Caminho 21" d="M294.432,15.919A54,54,0,0,0,256,0V108.7a54.351,54.351,0,0,0,38.432-92.782Z" transform="translate(-201.65)" fill="#005e86"/>
+                      <path id="Caminho_22" data-name="Caminho 22" d="M213.566,252.846V221H190.212v6.369h4.246v25.477H190v6.369h27.6v-6.369Z" transform="translate(-149.662 -174.08)" fill="#8de1fe"/>
+                      <path id="Caminho_23" data-name="Caminho 23" d="M220.554,120.108A9.554,9.554,0,1,0,211,110.554,9.565,9.565,0,0,0,220.554,120.108Z" transform="translate(-166.203 -79.557)" fill="#8de1fe"/>
+                      <path id="Caminho_24" data-name="Caminho 24" d="M256,120.108A9.554,9.554,0,0,0,256,101Z" transform="translate(-201.65 -79.557)" fill="#8de1fe"/>
+                      <path id="Caminho_25" data-name="Caminho 25" d="M265.554,252.846V221H256v38.215h13.588v-6.369Z" transform="translate(-201.65 -174.08)" fill="#8de1fe"/>
+                      <text id="Saber_Mais" data-name="Saber Mais" transform="translate(54.85 143.5)" fill="#fff" font-size="24" font-family="Montserrat-Regular, Montserrat"><tspan x="-65.436" y="0">Saber Mais</tspan></text>
+                    </g>
+                  </svg>
