@@ -5704,7 +5704,12 @@ a.badge-dark.focus {
 }
 
 .list-group-flush>.list-group-item {
-    border-width: 0 0 1px;
+    border-width: 0px 0px 1px 0px;
+}
+
+.list-group-flush>.list-group-item.activated {
+    border-width: 0px 0px 1px 10px;
+    border-color: #007bff;
     font-weight: bold;
 }
 
