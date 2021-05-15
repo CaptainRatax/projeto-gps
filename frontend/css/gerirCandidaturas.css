@@ -1,0 +1,76 @@
+.tituloContactos {
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 35px;
+}
+
+.adminCandidaturasPanel {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.adminCandidaturaTitulo {
+    font-weight: bold;
+    color: #5d6b96;
+    float: left;
+    margin-right: 10px;
+}
+
+.adminCandidaturaData {
+    color: lightslategray;
+}
+
+.adminCandidaturaDestaque {
+    float: left;
+    color: #7390eb;
+    margin-right: 20px;
+}
+
+.adminCandidaturasCol1 {
+    height: auto;
+    width: 20%;
+    min-width: 20%;
+    float: left;
+    display: contents;
+}
+
+.adminCandidaturasColEsq {
+    height: 100%;
+    width: 35%;
+    float: left;
+    padding-left: 10px;
+}
+
+.adminCandidaturasColDir {
+    height: 100%;
+    width: 65%;
+    float: left;
+    padding: 10px;
+    background-color: #ededed;
+    border-radius: 20px;
+}
+
+.verMais{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.btn-info{
+    background-color: #459bb9;
+    border-color: #459bb9;
+    border-radius: 50px;
+    padding: 5px 25px 5px 25px;
+    float: right;
+ }
+
+ .pnlMain{
+     border: solid darkgray 1px;
+     border-radius: 15px;
+     padding: 20px;
+ }
