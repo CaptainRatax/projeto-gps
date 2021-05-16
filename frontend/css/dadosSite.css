@@ -1,17 +1,31 @@
-.fieldsTitle{
+.fieldsTitle {
     font-weight: bold;
 }
 
-.tituloDadosSite{
-    font-size: 50px;
+.tituloDadosSite {
+    display: block;
+    margin-left: 8%;
+    font-size: 35px;
     font-weight: bold;
-    margin-left: 10%;
-    margin-top: 2%;
-    margin-bottom: 35px;
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
 }
 
-.form-group{
+.conteudoInputs {
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.botaoGuardar {
+    float: right;
+}
+
+.botaoGuardar button {
+    font-size: 20px;
+    border-radius: 59px;
 }
