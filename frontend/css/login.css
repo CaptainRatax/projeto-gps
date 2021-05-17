@@ -1,0 +1,75 @@
+/* Made with love by Mutiullah Samim*/
+
+.logos {
+    padding-top: 20px;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+.logos .dwdm {
+    width: 65%;
+}
+
+.logos .brightstart {
+    width: 20%;
+    margin-right: 15px;
+}
+
+html,
+body {
+    background-image: url('../Images/login_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    align-content: center;
+}
+
+.card {
+    height: 450px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 30px;
+}
+
+.card-header button {
+    font-size: 20px;
+    border-radius: 59px;
+}
+
+.areaInputEmail label,
+.areaInputPassword label {
+    color: white;
+}
+
+.areaInputEmail input::placeholder,
+.areaInputPassword input::placeholder {
+    font-weight: lighter;
+    color: rgb(196, 196, 196);
+}
+
+.areaInputPassword {
+    padding-top: 10px;
+}
+
+.remember {
+    padding-top: 10px;
+    color: white;
+}
+
+.remember input {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.login_btn {
+    border-radius: 59px;
+    width: 100px;
+}
