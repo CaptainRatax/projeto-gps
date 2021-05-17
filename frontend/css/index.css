@@ -39,6 +39,18 @@ a.btn.btn-primary.botaoCandidatate {
     margin-top: 20%;
 }
 
+.col-md.botaoSaberMais {
+    margin-bottom: 50px;
+}
+
+.col-md.botaoCandidaturas {
+    margin-bottom: 50px;
+}
+
+.col-md.botaoAjuda {
+    margin-bottom: 50px;
+}
+
 .jumbotron {
     background-image: url(../Images/homeBackground1080p.png);
     background-attachment: fixed;
