@@ -1,0 +1,50 @@
+.tituloCandidatura {
+    margin-left: 8%;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.areaCandidatura {
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.areaCandidatura div {
+    padding-bottom: 15px;
+}
+
+.areaCandidatura .areaNome {
+    padding-bottom: 25px;
+}
+
+.areaCandidatura .areaEmail {
+    padding-bottom: 25px;
+}
+
+.areaCandidatura div span {
+    font-size: 20px;
+}
+
+.areaCandidatura div .label {
+    padding-bottom: 8px;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+}
+
+.botaoDesaprovar button {
+    margin-left: 5%;
+    border-radius: 59px;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    float: left;
+}
+
+.botaoAprovar button {
+    margin-right: 5%;
+    border-radius: 59px;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    float: right;
+}
