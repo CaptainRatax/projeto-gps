@@ -74,3 +74,9 @@
      border-radius: 15px;
      padding: 20px;
  }
+
+.tituloContactos {
+    margin-left: 8%;
+    font-size: 35px;
+    font-weight: bold;
+}
