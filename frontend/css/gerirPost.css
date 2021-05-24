@@ -1,0 +1,43 @@
+.tituloGerirPost {
+    margin-left: 8%;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.areaPost {
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.inputTitulo,
+.inputTextoPreview,
+.uploadImagem {
+    padding-bottom: 20px;
+}
+
+.areaPost div label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.areaPost div input::placeholder {
+    font-weight: lighter;
+    color: rgb(196, 196, 196);
+}
+
+.uploadImagem input {
+    height: 45px;
+}
+
+.botaoGuardarPost {
+    float: right;
+    padding-top: 30px;
+    padding-right: 10px;
+}
+
+.botaoGuardarPost button {
+    padding: .5rem 1rem;
+    border-radius: 59px;
+    font-weight: bold;
+}

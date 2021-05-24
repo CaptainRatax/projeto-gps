@@ -9,7 +9,7 @@
     padding-right: 8%;
 }
 
-.botaoAdicionarPost button {
+.botaoAdicionarPost a {
     border-radius: 59px;
     font-size: 20px;
     float: right;
@@ -31,7 +31,7 @@
     border-radius: 59px;
 }
 
-.botaoEditarPost button {
+.botaoEditarPost a {
     border-radius: 59px;
 }
 

@@ -1,76 +1,85 @@
 .tituloContactos {
-    font-size: 50px;
+    margin-left: 8%;
+    font-size: 35px;
     font-weight: bold;
-    margin-left: 10%;
-    margin-top: 2%;
-    margin-bottom: 35px;
 }
 
-.adminCandidaturasPanel {
-    width: 75%;
-    margin: 0 auto;
-    margin-bottom: 40px;
+.areaCandidaturas {
+    margin-top: 50px;
+    margin-left: 8%;
+    margin-right: 8%;
 }
 
-.adminCandidaturaTitulo {
+.itemCandidaturas {
+    padding: 15px;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightgray;
+    margin-bottom: 25px;
+}
+
+.areaDescricao {
+    border-radius: 30px;
+    background-color: lightgray;
+    padding: 15px;
+}
+
+.textoNome,
+.textoData,
+.textoEscola {
+    margin-bottom: 5px;
+}
+
+.textoEmail,
+.textoNumero {
+    margin-bottom: 5px;
+}
+
+.textoNome span,
+.textoData span,
+.textoEscola span {
+    color: #223E6D;
+    font-size: 18px;
+}
+
+.textoEmail a,
+.textoNumero a {
+    color: #367BE2;
+    font-size: 18px;
+}
+
+.textoNome span {
     font-weight: bold;
-    color: #5d6b96;
-    float: left;
-    margin-right: 10px;
 }
 
-.adminCandidaturaData {
-    color: lightslategray;
+.textoData span {
+    color: #92A5C6;
 }
 
-.adminCandidaturaDestaque {
-    float: left;
-    color: #7390eb;
-    margin-right: 20px;
+.escolaEstatico {
+    font-weight: bold;
 }
 
-.adminCandidaturasCol1 {
-    height: auto;
-    width: 20%;
-    min-width: 20%;
-    float: left;
-    display: contents;
+.botaoVerMais {
+    padding-top: 10px;
 }
 
-.adminCandidaturasColEsq {
-    height: 100%;
-    width: 35%;
-    float: left;
-    padding-left: 10px;
-}
-
-.adminCandidaturasColDir {
-    height: 100%;
-    width: 65%;
-    float: left;
-    padding: 10px;
-    background-color: #ededed;
-    border-radius: 20px;
-}
-
-.verMais{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4; /* number of lines to show */
-    -webkit-box-orient: vertical;
-}
-
-.btn-info{
-    background-color: #459bb9;
-    border-color: #459bb9;
-    border-radius: 50px;
-    padding: 5px 25px 5px 25px;
+.botaoVerMais a {
     float: right;
- }
+    border-radius: 59px;
+    padding: .375rem 1.1rem
+}
 
- .pnlMain{
-     border: solid darkgray 1px;
-     border-radius: 15px;
-     padding: 20px;
- }
+.areaDescricao span {
+    font-size: 18px;
+}
+
+.botaoCarregarMais {
+    text-align: center;
+}
+
+.botaoCarregarMais button {
+    border-radius: 59px;
+    padding: .39rem 1.1rem;
+}
