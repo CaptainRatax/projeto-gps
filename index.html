@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/stylesheet.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./src/css/stylesheet.css">
+    <link rel="stylesheet" href="./src/css/navbar.css">
+    <link rel="stylesheet" href="./src/css/index.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
@@ -19,8 +19,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="navbar-brand">
             <div class="logos">
-                <img class="brightstart" id="Imagem1" src="../Images/brightstart-small.png">
-                <img class="dwdm" id="image" src="../Images/dwdm.png">
+                <img class="brightstart" id="Imagem1" src="./src/Images/brightstart-small.png">
+                <img class="dwdm" id="image" src="./src/Images/dwdm.png">
             </div>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,26 +29,26 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link active" href="./index.html">Home</a>
+                    <a class="nav-link active" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./candidatura.html">Candidatura</a>
+                    <a class="nav-link" href="/candidaturas">Candidatura</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./blog.html">Blog</a>
+                    <a class="nav-link" href="/blog">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./contactos.html">Contactos</a>
+                    <a class="nav-link" href="/contactos">Contactos</a>
                 </li>
             </ul>
         </div>
     </nav>
     <nav class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="./index.html">Home</a></li>
-            <li><a href="./candidatura.html">Candidatura</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./contactos.html">Contactos</a></li>
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/candidaturas">Candidatura</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contactos">Contactos</a></li>
         </ul>
     </nav>
 </header>
@@ -64,22 +64,22 @@
                     <span>Estuda, trabalha, investe já no teu futuro, não deixes para depois</span>
                 </div>
                 <div class="divBotaoCandidatate">
-                    <a class="btn btn-primary botaoCandidatate" href="./candidatura.html">Candidata-te</a>
+                    <a class="btn btn-primary botaoCandidatate" href="/candidaturas">Candidata-te</a>
                 </div>
                 <div class="row botoesExtrasHome">
                     <div class="col-md botaoSaberMais">
                         <a href="#areaSobre">
-                            <img src="../Images/saber-mais.svg">
+                            <img src="./src/Images/saber-mais.svg">
                         </a>
                     </div>
                     <div class="col-md botaoCandidaturas">
-                        <a href="./candidatura.html">
-                            <img src="../Images/candidaturas.svg">
+                        <a href="/candidaturas">
+                            <img src="./src/Images/candidaturas.svg">
                         </a>
                     </div>
                     <div class="col-md botaoAjuda">
-                        <a href="./contactos.html">
-                            <img src="../Images/ajuda.svg">
+                        <a href="/contactos">
+                            <img src="./src/Images/ajuda.svg">
                         </a>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
             </div>
             <div class="row areaTextoSobre">
                 <div class="col-md-5 imagemAreaSobre">
-                    <img src="../Images/brightstart-big.png" class="img-fluid">
+                    <img src="./src/Images/brightstart-big.png" class="img-fluid">
                 </div>
                 <div class="col-md-7 textoSobre">
                     <span>O BrightStart é um programa de aceleração de competências para os finalistas do ensino secundário que
