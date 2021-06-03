@@ -1,5 +1,6 @@
 var express = require('express')
 var router = express.Router()
+var mongoose = require('mongoose')
 
 var candidaturas = require('./apiRoutes/candidaturas')
 
