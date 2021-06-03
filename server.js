@@ -88,7 +88,6 @@ app.get('/administracao/candidaturas/detalhes', function(req, res) {
 app.post('/api/candidatura', async(req, res) => {
     try {
         var candidatura = new Candidatura(req.body)
-        console.log(candidatura)
         var candidaturaGuardada = await candidatura.save()
         res.status(200).send(candidaturaGuardada)
     } catch (error) {
@@ -99,6 +98,23 @@ app.post('/api/candidatura', async(req, res) => {
     }
 })
 
+//Request Dummy que vai ser chamado de tanto em tanto tempo para não deixar o heroku e o mongodb entrarem em repouso
+app.get('/api/dummy', async(req, res) => {
+    const dummySchemma = new mongoose.Schema({
+        dummy: 'string',
+        dummy2: 'string'
+    })
+    const Dummy = mongoose.model('Dummy', dummySchemma)
+    try {
+        var dummy = new Dummy({ "dummy": "dummy", "dummy2": "dummy2" })
+        var dummyGuardado = await dummy.save()
+        await Dummy.deleteOne({ _id: dummyGuardado._id })
+        res.status(200).send("Dummy called!")
+    } catch (error) {
+        res.status(500).send("Erro ao tentar chamar o dummy. Erro:" + error)
+    }
+
+})
 
 
 
