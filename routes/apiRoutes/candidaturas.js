@@ -1,0 +1,28 @@
+var express = require('express')
+var router = express.Router()
+var mongoose = require('mongoose')
+
+const candidaturaSchema = new mongoose.Schema({
+    nome: 'string',
+    email: 'string',
+    telemovel: 'string',
+    escola: 'string',
+    descricao: 'string',
+    imagem: 'string'
+})
+const Candidatura = mongoose.model('Candidatura', candidaturaSchema)
+
+router.post('/nova', async(req, res) => {
+    try {
+        var candidatura = new Candidatura(req.body)
+        var candidaturaGuardada = await candidatura.save()
+        res.status(200).send(candidaturaGuardada)
+        console.log('Pedido POST de nova candidatura recebido e feito com sucesso')
+    } catch (error) {
+        res.sendStatus(500)
+        console.log('Pedido POST de nova candidatura falhou! Erros:')
+        return console.error(error)
+    }
+})
+
+module.exports = router
