@@ -9,7 +9,7 @@ const candidaturaSchema = new mongoose.Schema({
     escola: 'string',
     descricao: 'string',
     imagem: 'string'
-})
+}, { timestamps: true })
 const Candidatura = mongoose.model('Candidatura', candidaturaSchema)
 
 router.post('/nova', async(req, res) => {
