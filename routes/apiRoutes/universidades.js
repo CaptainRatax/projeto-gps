@@ -87,4 +87,25 @@ router.get('/sigla/:sigla', async(req, res) => {
     }
 })
 
+router.patch('/alterar', async(req, res) => {
+    try {
+        var universidade = new Universidade(req.body)
+        var ObjectId = require('mongoose').Types.ObjectId;
+        if (!ObjectId.isValid(req.body._id)) {
+            return res.status(400).send("Esse id não é válido!")
+        }
+        var verifyUniversidade = await Universidade.find({ _id: req.body._id })
+        if (verifyUniversidade.length === 0) {
+            return res.status(404).send("Não foi encontrada nenhuma universidade com esse id")
+        }
+        var universidadeGuardada = await Universidade.findOneAndUpdate({ _id: req.body._id }, universidade, { new: true, overwrite: true })
+        res.status(200).send(universidadeGuardada)
+        console.log('Pedido Patch de alterar uma universidade recebido e feito com sucesso')
+    } catch (error) {
+        res.status(500).send("Algo correu mal com o pedido")
+        console.log('Pedido GET de todas as universidades falhou! Erros:')
+        return console.error(error)
+    }
+})
+
 module.exports = router
