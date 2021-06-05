@@ -9,6 +9,17 @@ const universidadeSchema = new mongoose.Schema({
 })
 const Universidade = mongoose.model('Universidade', universidadeSchema)
 
+router.get('/', async(req, res) => {
+    try {
+        var universidades = await Universidade.find({})
+        res.status(200).send(universidades)
+    } catch (error) {
+        res.sendStatus(500)
+        console.log('Pedido GET de todas as universidades falhou! Erros:')
+        return console.error(error)
+    }
+})
+
 router.post('/nova', async(req, res) => {
     try {
         var universidade = new Universidade(req.body)
