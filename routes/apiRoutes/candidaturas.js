@@ -19,7 +19,7 @@ router.post('/nova', async(req, res) => {
         res.status(200).send(candidaturaGuardada)
         console.log('Pedido POST de nova candidatura recebido e feito com sucesso')
     } catch (error) {
-        res.sendStatus(500)
+        res.status(500).send("Algo correu mal com o pedido")
         console.log('Pedido POST de nova candidatura falhou! Erros:')
         return console.error(error)
     }
