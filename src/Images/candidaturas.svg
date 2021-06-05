@@ -1,21 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="162" height="149.5" viewBox="0 0 162 149.5">
-                    <g id="google-forms" transform="translate(26.697 -0.498)">
-                      <circle id="Elipse_1" data-name="Elipse 1" cx="53.806" cy="53.806" r="53.806" transform="translate(0.498 0.498)" fill="#005e86"/>
-                      <path id="Caminho_5" data-name="Caminho 5" d="M206.3,191.354,181.84,166.9l-57.026,55.614,16,16A54.124,54.124,0,0,0,206.3,191.354Z" transform="translate(-98.238 -131.434)" fill="#005e86"/>
-                      <path id="Caminho_6" data-name="Caminho 6" d="M156.094,73.544H122.888a5.718,5.718,0,0,0-5.718,5.718v65.632a5.718,5.718,0,0,0,5.718,5.718h47.2a5.718,5.718,0,0,0,5.718-5.718V93.26l-10.948-8.311Z" transform="translate(-92.208 -57.796)" fill="#8de1fe"/>
-                      <path id="Caminho_8" data-name="Caminho 8" d="M301.474,87.541a5.718,5.718,0,0,0,5.718,5.718h14L301.474,73.543Z" transform="translate(-237.588 -57.795)" fill="#459bb9"/>
-                      <path id="Caminho_7" data-name="Caminho 7" d="M265.7,73.544H256.12v77.068H279.7a5.718,5.718,0,0,0,5.718-5.718V93.26l-11.131-8.127Z" transform="translate(-201.813 -57.796)" fill="#8de1fe"/>
-                      <path id="Caminho_9" data-name="Caminho 9" d="M171.958,303.683h5.64v6.336h-5.64Z" transform="translate(-135.425 -239.33)" fill="#fff"/>
-                      <path id="Caminho_10" data-name="Caminho 10" d="M213.8,303.683h8.939v6.336H213.8Z" transform="translate(-168.426 -239.33)" fill="#fff"/>
-                      <path id="Caminho_11" data-name="Caminho 11" d="M256.121,303.683h17.724v6.336H256.121Z" transform="translate(-201.813 -239.33)" fill="#fff"/>
-                      <path id="Caminho_12" data-name="Caminho 12" d="M171.958,360.366h5.64V366.7h-5.64Z" transform="translate(-135.425 -284.042)" fill="#fff"/>
-                      <path id="Caminho_13" data-name="Caminho 13" d="M213.8,360.366h8.939V366.7H213.8Z" transform="translate(-168.426 -284.042)" fill="#fff"/>
-                      <path id="Caminho_14" data-name="Caminho 14" d="M256.121,360.366h17.724V366.7H256.121Z" transform="translate(-201.813 -284.042)" fill="#fff"/>
-                      <path id="Caminho_15" data-name="Caminho 15" d="M171.958,247h5.64v6.336h-5.64Z" transform="translate(-135.425 -194.618)" fill="#fff"/>
-                      <path id="Caminho_16" data-name="Caminho 16" d="M213.795,247h26.663v6.336H213.795Z" transform="translate(-168.426 -194.618)" fill="#fff"/>
-                      <path id="Caminho_17" data-name="Caminho 17" d="M256.121,303.683h17.724v6.336H256.121Z" transform="translate(-201.813 -239.33)" fill="#fff"/>
-                      <path id="Caminho_18" data-name="Caminho 18" d="M256.121,360.366h17.724V366.7H256.121Z" transform="translate(-201.813 -284.042)" fill="#fff"/>
-                      <path id="Caminho_19" data-name="Caminho 19" d="M256.121,247h17.724v6.336H256.121Z" transform="translate(-201.813 -194.618)" fill="#fff"/>
-                      <text id="Candidaturas" transform="translate(54.303 143.998)" fill="#fff" font-size="24" font-family="Montserrat-Regular, Montserrat"><tspan x="-80.94" y="0">Candidaturas</tspan></text>
-                    </g>
-                  </svg>  
+  <g id="Grupo_145" data-name="Grupo 145" transform="translate(-884.5 -1149)">
+    <circle id="Elipse_1" data-name="Elipse 1" cx="53.806" cy="53.806" r="53.806" transform="translate(911.694 1149)" fill="#02aad5"/>
+    <text id="Candidaturas" transform="translate(965.5 1292.5)" fill="#005e86" font-size="24" font-family="Montserrat-Regular, Montserrat"><tspan x="-80.94" y="0">Candidaturas</tspan></text>
+    <path id="Subtração_5" data-name="Subtração 5" d="M41,59H5a5.006,5.006,0,0,1-5-5V5A5.006,5.006,0,0,1,5,0H41a5.006,5.006,0,0,1,5,5V54A5.006,5.006,0,0,1,41,59ZM16.708,46.607v4.855H37.853V46.607H16.708Zm-7.008,0v4.855h4.473V46.607Zm7.008-9.173v4.855H37.853V37.435H16.708Zm-7.008,0v4.855h4.473V37.435Zm7.008-9.173v4.855H37.853V28.262Zm-7.008,0v4.855h4.473V28.262Z" transform="translate(942.5 1175)" fill="#fff"/>
+  </g>
+</svg>
