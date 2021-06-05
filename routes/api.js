@@ -3,8 +3,10 @@ var router = express.Router()
 var mongoose = require('mongoose')
 
 var candidaturas = require('./apiRoutes/candidaturas')
+var universidades = require('./apiRoutes/universidades.js')
 
 router.use('/candidaturas', candidaturas)
+router.use('/universidades', universidades)
 
 const dummySchemma = new mongoose.Schema({
     dummy: 'string',

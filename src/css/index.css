@@ -2,27 +2,33 @@
     top: 50%;
     left: 50%;
     padding-top: 12.5%;
-    text-align: center;
+}
+
+.logoMain {
+    float: right;
+    height: 300px;
+}
+
+.painelDireita {
+    padding-left: 50px;
 }
 
 .tituloHomePage {
     font-style: normal;
-    font-weight: bold;
-    font-size: 450%;
+    font-size: 350%;
     color: rgba(255, 255, 255, 1);
 }
 
 .subtituloHomePage {
     font-style: normal;
-    font-weight: bold;
-    font-size: 170%;
+    font-size: 140%;
     color: rgba(255, 255, 255, 1);
     margin: 10px;
 }
 
 .divBotaoCandidatate {
-    text-align: center;
-    margin: 40px;
+    margin-top: 30px;
+    margin-left: 10px;
 }
 
 a.btn.btn-primary.botaoCandidatate {
@@ -32,11 +38,14 @@ a.btn.btn-primary.botaoCandidatate {
     white-space: nowrap;
     font-size: 150%;
     font-weight: bold;
+    border-radius: 50px;
+    width: 210px;
 }
 
 .row.botoesExtrasHome {
     text-align: center;
-    margin-top: 20%;
+    margin-top: 10px;
+    width: 100%;
 }
 
 .col-md.botaoSaberMais {
@@ -58,10 +67,11 @@ a.btn.btn-primary.botaoCandidatate {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 0%;
+    height: 910px;
 }
 
 .areaSobre {
-    margin-top: 80px;
+    margin-top: 10px;
 }
 
 .tituloSobreHome {
