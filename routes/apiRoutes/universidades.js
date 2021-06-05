@@ -44,4 +44,15 @@ router.get('/candidaturasAbertas', async(req, res) => {
     }
 })
 
+router.get('/candidaturasFechadas', async(req, res) => {
+    try {
+        var universidades = await Universidade.find({ candidaturasAbertas: false })
+        res.status(200).send(universidades)
+    } catch (error) {
+        res.sendStatus(500)
+        console.log('Pedido GET de todas as universidades falhou! Erros:')
+        return console.error(error)
+    }
+})
+
 module.exports = router
