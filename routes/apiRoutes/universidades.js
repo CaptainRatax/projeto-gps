@@ -103,7 +103,7 @@ router.patch('/alterar', async(req, res) => {
         if (verifyUniversidade.length === 0) {
             return res.status(404).send("Não foi encontrada nenhuma universidade com esse id")
         }
-        var universidadeGuardada = await Universidade.findOneAndUpdate({ _id: req.body._id }, universidade, { new: true })
+        var universidadeGuardada = await Universidade.findOneAndUpdate({ _id: req.body._id }, universidade, { new: true, useFindAndModify: false })
         res.status(200).send(universidadeGuardada)
         console.log('Pedido Patch de alterar uma universidade recebido e feito com sucesso')
     } catch (error) {
