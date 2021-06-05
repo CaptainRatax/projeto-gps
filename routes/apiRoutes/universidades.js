@@ -55,4 +55,22 @@ router.get('/candidaturasFechadas', async(req, res) => {
     }
 })
 
+router.get('/:id', async(req, res) => {
+    try {
+        var ObjectId = require('mongoose').Types.ObjectId;
+        if (!ObjectId.isValid(req.params.id)) {
+            return res.status(400).send("Esse id não é válido!")
+        }
+        var universidade = await Universidade.find({ _id: req.params.id })
+        if (universidade.length === 0) {
+            return res.status(404).send("Não foi encontrada nenhuma universidade com o id " + req.params.id)
+        }
+        res.status(200).send(universidade[0])
+    } catch (error) {
+        res.status(500).send("Algo correu mal com o pedido")
+        console.log('Pedido GET de todas as universidades falhou! Erros:')
+        return console.error(error)
+    }
+})
+
 module.exports = router
