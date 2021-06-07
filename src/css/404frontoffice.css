@@ -1,0 +1,35 @@
+html,
+body {
+    background-image: url('../Images/login_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.center {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 8%;
+}
+
+.image404 {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 17pc;
+}
+
+.Error {
+    font-weight: bold;
+    font-size: 6pc;
+    text-align: center;
+    color: white;
+}
+
+.titulo2 {
+    color: white;
+    font-size: 4pc;
+    text-align: center;
+}
