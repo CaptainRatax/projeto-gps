@@ -1,13 +1,7 @@
 var express = require('express')
 var router = express.Router()
 var mongoose = require('mongoose')
-
-const universidadeSchema = new mongoose.Schema({
-    sigla: 'string',
-    nome: 'string',
-    candidaturasAbertas: 'boolean'
-}, { timestamps: true })
-const Universidade = mongoose.model('Universidade', universidadeSchema)
+const Universidade = require('../../models/universidadeSchema')
 
 router.get('/', async(req, res) => {
     try {
