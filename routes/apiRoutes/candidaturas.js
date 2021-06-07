@@ -1,16 +1,8 @@
 var express = require('express')
 var router = express.Router()
 var mongoose = require('mongoose')
+const Candidatura = require('../../models/candidaturaSchema')
 
-const candidaturaSchema = new mongoose.Schema({
-    nome: 'string',
-    email: 'string',
-    telemovel: 'string',
-    escola: 'string',
-    descricao: 'string',
-    imagem: 'string'
-}, { timestamps: true })
-const Candidatura = mongoose.model('Candidatura', candidaturaSchema)
 
 router.post('/nova', async(req, res) => {
     try {
