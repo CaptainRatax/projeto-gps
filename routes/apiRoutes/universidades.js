@@ -1,7 +1,7 @@
 var express = require('express')
 var router = express.Router()
 var mongoose = require('mongoose')
-const Universidade = require('../../models/universidadeSchema')
+const { Universidade } = require('../../models/universidadeSchema')
 
 router.get('/', async(req, res) => {
     try {
@@ -54,7 +54,7 @@ router.get('/candidaturasFechadas', async(req, res) => {
 
 router.get('/id/:id', async(req, res) => {
     try {
-        var ObjectId = require('mongoose').Types.ObjectId;
+        var ObjectId = mongoose.Types.ObjectId;
         if (!ObjectId.isValid(req.params.id)) {
             return res.status(400).send("Esse id não é válido!")
         }
@@ -89,7 +89,7 @@ router.get('/sigla/:sigla', async(req, res) => {
 router.patch('/alterar', async(req, res) => {
     try {
         var universidade = new Universidade(req.body)
-        var ObjectId = require('mongoose').Types.ObjectId;
+        var ObjectId = mongoose.Types.ObjectId;
         if (!ObjectId.isValid(req.body._id)) {
             return res.status(400).send("Esse id não é válido!")
         }
@@ -109,7 +109,7 @@ router.patch('/alterar', async(req, res) => {
 
 router.delete('/eliminar/:id', async(req, res) => {
     try {
-        var ObjectId = require('mongoose').Types.ObjectId;
+        var ObjectId = mongoose.Types.ObjectId;
         if (!ObjectId.isValid(req.params.id)) {
             return res.status(400).send("Esse id não é válido!")
         }
@@ -118,7 +118,7 @@ router.delete('/eliminar/:id', async(req, res) => {
             return res.status(404).send("Não foi encontrada nenhuma universidade com esse id")
         }
         await Universidade.deleteOne({ _id: req.params.id })
-        res.status(200).send("A universidade foi eliminadad com sucesso!")
+        res.status(200).send("A universidade foi eliminada com sucesso!")
         console.log('Pedido DELETE universidade recebido e feito com sucesso')
     } catch (error) {
         res.status(500).send("Algo correu mal com o pedido")

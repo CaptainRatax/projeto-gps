@@ -8,4 +8,7 @@ const universidadeSchema = new mongoose.Schema({
 
 const Universidade = mongoose.model('Universidade', universidadeSchema)
 
-module.exports = Universidade
+module.exports = {
+    Universidade: Universidade,
+    universidadeSchema: universidadeSchema
+}
