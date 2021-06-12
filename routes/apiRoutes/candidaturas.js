@@ -3,6 +3,7 @@ var router = express.Router()
 var mongoose = require('mongoose')
 var emailValidator = require("email-validator");
 const { Candidatura } = require('../../models/candidaturaSchema')
+const { Universidade } = require('../../models/universidadeSchema')
 
 
 router.post('/nova', async(req, res) => {
@@ -10,6 +11,17 @@ router.post('/nova', async(req, res) => {
         var candidatura = new Candidatura(req.body)
         if (!req.body.email) {
             return res.status(400).send("Body inválido!")
+        }
+        var ObjectId = mongoose.Types.ObjectId;
+        if (!ObjectId.isValid(req.body.universidade._id)) {
+            return res.status(400).send("Esse id não é válido!")
+        }
+        var verifyUniversidade = await Universidade.find({ _id: req.body.universidade._id })
+        if (verifyUniversidade.length === 0) {
+            return res.status(404).send("Não foi encontrada nenhuma universidade com esse id")
+        }
+        if (!verifyUniversidade[0].candidaturasAbertas) {
+            return res.status(400).send("Essa universidade não tem as candidaturas abertas")
         }
         if (!emailValidator.validate(req.body.email)) {
             return res.status(400).send("Email inválido!")
