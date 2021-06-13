@@ -5,10 +5,12 @@ var mongoose = require('mongoose')
 var candidaturas = require('./apiRoutes/candidaturas')
 var universidades = require('./apiRoutes/universidades')
 var posts = require('./apiRoutes/posts')
+var contactos = require('./apiRoutes/contactos')
 
 router.use('/candidaturas', candidaturas)
 router.use('/universidades', universidades)
 router.use('/posts', posts)
+router.use('/contactos', contactos)
 
 const dummySchemma = new mongoose.Schema({
     dummy: 'string',
