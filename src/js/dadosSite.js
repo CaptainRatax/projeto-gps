@@ -1,29 +1,44 @@
-$(() => {
-    console.log("ready");
+var apiBaseUrl;
+$(async() => {
+    getAPIUrl();
     getDadosSite();
     $("#btnSubmeterDadosSite").click(() => {
         updateDadosSite();
     })
 })
 
+async function getAPIUrl() {
+    var file = "../../apiBaseUrl.txt"
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4) {
+            if (rawFile.status === 200 || rawFile.status == 0) {
+                apiBaseUrl = rawFile.responseText;
+            }
+        }
+    }
+    rawFile.send(null);
+}
+
 function getDadosSite() {
     var chaveTituloHome = $("#labelTituloHome").text()
-    $.get("http://localhost:3000/api/dadossite/chave/" + chaveTituloHome, (data) => {
+    $.get(apiBaseUrl + "/dadossite/chave/" + chaveTituloHome, (data) => {
         $("#tituloHome").val(data.valor)
     })
 
     var chaveSubtituloHome = $("#labelSubtituloHome").text()
-    $.get("http://localhost:3000/api/dadossite/chave/" + chaveSubtituloHome, (data) => {
+    $.get(apiBaseUrl + "/dadossite/chave/" + chaveSubtituloHome, (data) => {
         $("#subtituloHome").val(data.valor)
     })
 
     var chaveTituloSobre = $("#labelTituloSobre").text()
-    $.get("http://localhost:3000/api/dadossite/chave/" + chaveTituloSobre, (data) => {
+    $.get(apiBaseUrl + "/dadossite/chave/" + chaveTituloSobre, (data) => {
         $("#tituloSobre").val(data.valor)
     })
 
     var chaveTextoSobre = $("#labelTextoAreaSobre").text()
-    $.get("http://localhost:3000/api/dadossite/chave/" + chaveTextoSobre, (data) => {
+    $.get(apiBaseUrl + "/dadossite/chave/" + chaveTextoSobre, (data) => {
         $("#textoAreaSobre").val(data.valor)
     })
 }
@@ -31,12 +46,12 @@ function getDadosSite() {
 function updateDadosSite() {
 
     var chaveTextoSobre = $("#labelTextoAreaSobre").text()
-    $.get("http://localhost:3000/api/dadossite/chave/" + chaveTextoSobre, (data) => {
+    $.get(apiBaseUrl + "/dadossite/chave/" + chaveTextoSobre, (data) => {
         data.valor = $("#textoAreaSobre").val()
         console.log(JSON.stringify(data))
         $.ajax({
             type: 'PATCH',
-            url: 'http://localhost:3000/api/dadossite/alterar',
+            url: apiBaseUrl + '/dadossite/alterar',
             data: JSON.stringify(data),
             processData: false,
             contentType: 'application/json',
