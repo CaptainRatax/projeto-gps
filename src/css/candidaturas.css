@@ -53,3 +53,8 @@ button.btn.btn-primary.enviarCandidatura {
 #politecnicos {
     width: fit-content;
 }
+
+.alert {
+    display: none;
+    text-align: center;
+}
