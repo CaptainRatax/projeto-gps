@@ -45,6 +45,51 @@ function getDadosSite() {
 
 function updateDadosSite() {
 
+    var chaveSubtituloHome = $("#labelSubtituloHome").text()
+    $.get(apiBaseUrl + "/dadossite/chave/" + chaveSubtituloHome, (data) => {
+        data.valor = $("#subtituloHome").val()
+        console.log(JSON.stringify(data))
+        $.ajax({
+            type: 'PATCH',
+            url: apiBaseUrl + '/dadossite/alterar',
+            data: JSON.stringify(data),
+            processData: false,
+            contentType: 'application/json',
+
+            /* success and error handling omitted for brevity */
+        });
+    })
+
+    var chaveTituloSobre = $("#labelTituloSobre").text()
+    $.get(apiBaseUrl + "/dadossite/chave/" + chaveTituloSobre, (data) => {
+        data.valor = $("#tituloSobre").val()
+        console.log(JSON.stringify(data))
+        $.ajax({
+            type: 'PATCH',
+            url: apiBaseUrl + '/dadossite/alterar',
+            data: JSON.stringify(data),
+            processData: false,
+            contentType: 'application/json',
+
+            /* success and error handling omitted for brevity */
+        });
+    })
+
+    var chaveTituloHome = $("#labelTituloHome").text()
+    $.get(apiBaseUrl + "/dadossite/chave/" + chaveTituloHome, (data) => {
+        data.valor = $("#tituloHome").val()
+        console.log(JSON.stringify(data))
+        $.ajax({
+            type: 'PATCH',
+            url: apiBaseUrl + '/dadossite/alterar',
+            data: JSON.stringify(data),
+            processData: false,
+            contentType: 'application/json',
+
+            /* success and error handling omitted for brevity */
+        });
+    })
+
     var chaveTextoSobre = $("#labelTextoAreaSobre").text()
     $.get(apiBaseUrl + "/dadossite/chave/" + chaveTextoSobre, (data) => {
         data.valor = $("#textoAreaSobre").val()
