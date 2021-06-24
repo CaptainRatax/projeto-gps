@@ -5,6 +5,13 @@ require('dotenv').config()
 var app = express()
 var http = require('http').Server(app)
 var mongoose = require('mongoose')
+var fs = require('fs');
+
+// writeFile function with filename, content and callback function
+fs.writeFile('apiBaseUrl.txt', process.env.APIBASEURL, function(err) {
+    if (err) throw err;
+    console.log('API Base Url saved successfully.');
+});
 
 app.use(express.static(__dirname))
 app.use(bodyParser.json())
