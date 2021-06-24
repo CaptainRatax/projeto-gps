@@ -83,6 +83,11 @@
             <span>Candidatura</span>
         </div>
         <div class="row camposCandidaturas">
+            <div class="col-md-12 escolhaPolitecnico">
+                <label for="politecnicos" style="font-weight: bold;">Politécnico</label>
+                <select name="selector" id="politecnicos" class="form-control" aria-label="Default select example">
+                </select>
+            </div>
             <div class="col-md-6">
                 <div class="form-group inputsCandidatura inputMome">
                     <label for="inputNome">Nome Completo</label>
@@ -109,7 +114,7 @@
             <textarea class="form-control" id="textAreaDescricao" placeholder="Fala-nos mais sobre ti e porque queres participar no curso"></textarea>
         </div>
         <div class="divEnviarCandidatura">
-            <button type="submit" class="btn btn-primary enviarCandidatura">Enviar</button>
+            <button id="enviar" type="submit" class="btn btn-primary enviarCandidatura">Enviar</button>
         </div>
     </div>
     </div>
