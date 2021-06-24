@@ -35,27 +35,43 @@ function getCandidaturasAbertas() {
 }
 
 function submeterCandidatura() {
-    var sigla = $('select[name=selector] option').filter(':selected').val();
-    $.get(apiBaseUrl + "/universidades/sigla/" + sigla, (politecnico) => {
-        var candidatura = {
-            nome: $("#inputNome").val(),
-            email: $("#inputEmail").val(),
-            telemovel: $("#inputTelemovel").val(),
-            escola: $("#inputEscola").val(),
-            descricao: $("#textAreaDescricao").val(),
-            imagem: "",
-            aprovacao: null,
-            universidade: politecnico
-        }
+    if ($("#inputNome").val() == "" || $("#inputEmail").val() == "" || $("#inputTelemovel").val() == "" || $("#inputEscola").val() == "" || $("#inputEscola").val() == "") {
+        $(".warning").css("display", "block");
+        $(".success").css("display", "none");
+        $(".error").css("display", "none");
+    } else {
+        var sigla = $('select[name=selector] option').filter(':selected').val();
+        $.get(apiBaseUrl + "/universidades/sigla/" + sigla, (politecnico) => {
+            var candidatura = {
+                nome: $("#inputNome").val(),
+                email: $("#inputEmail").val(),
+                telemovel: $("#inputTelemovel").val(),
+                escola: $("#inputEscola").val(),
+                descricao: $("#inputEscola").val(),
+                imagem: "",
+                aprovacao: null,
+                universidade: politecnico
+            }
 
-        console.log(JSON.stringify(candidatura));
+            console.log(JSON.stringify(candidatura));
 
-        $.ajax({
-            type: 'POST',
-            url: apiBaseUrl + '/candidaturas/nova',
-            data: JSON.stringify(candidatura),
-            processData: false,
-            contentType: 'application/json',
-        });
-    })
+            $.ajax({
+                type: 'POST',
+                url: apiBaseUrl + '/candidaturas/nova',
+                data: JSON.stringify(candidatura),
+                processData: false,
+                contentType: 'application/json',
+                success: function() {
+                    $(".success").css("display", "block");
+                    $(".error").css("display", "none");
+                    $(".warning").css("display", "none");
+                },
+                error: function() {
+                    $(".error").css("display", "block");
+                    $(".warning").css("display", "none");
+                    $(".success").css("display", "none");
+                }
+            });
+        })
+    }
 }
