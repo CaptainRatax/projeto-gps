@@ -47,6 +47,21 @@ router.get('/id/:id', async(req, res) => {
     }
 })
 
+router.get('/chave/:chave', async(req, res) => {
+    try {
+        var dadosSite = await DadosSite.find({ chave: req.params.chave })
+        if (dadosSite.length === 0) {
+            return res.status(404).send("Não foram encontrados nenhuns dados do site com essa chave")
+        }
+        res.status(200).send(dadosSite[0])
+        console.log('Pedido GET de dados do site por dhave recebido e feito com sucesso')
+    } catch (error) {
+        res.status(500).send("Algo correu mal com o pedido")
+        console.log('Pedido GET de dados do site por chave falhou! Erros:')
+        return console.error(error)
+    }
+})
+
 router.patch('/alterar', async(req, res) => {
     try {
         var dadosDoSite = new DadosSite(req.body)

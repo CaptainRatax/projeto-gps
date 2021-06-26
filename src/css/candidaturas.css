@@ -45,3 +45,16 @@ button.btn.btn-primary.enviarCandidatura {
     margin-right: 10.5%;
     margin-top: 60px;
 }
+
+.escolhaPolitecnico {
+    margin-bottom: 20px;
+}
+
+#politecnicos {
+    width: fit-content;
+}
+
+.alert {
+    display: none;
+    text-align: center;
+}
