@@ -1,8 +1,7 @@
-var apiBaseUrl, globalCandidaturas;
+var apiBaseUrl, globalCandidaturas, globalStatus;
 $(() => {
     getAPIUrl();
     getCandidaturas();
-
 })
 
 function getAPIUrl() {
@@ -30,7 +29,7 @@ function aprovarCandidatura(i) {
             processData: false,
             contentType: 'application/json',
             success: function() {
-                getCandidaturas();
+                getCandidaturas(globalStatus);
                 $(".success").empty();
                 $(".success").append("Candidatura aprovada com sucesso!");
                 $(".success").css("display", "block");
@@ -56,7 +55,7 @@ function rejeitarCandidatura(i) {
             processData: false,
             contentType: 'application/json',
             success: function() {
-                getCandidaturas();
+                getCandidaturas(globalStatus);
                 $(".success").empty();
                 $(".success").append("Candidatura rejeitada com sucesso!");
                 $(".success").css("display", "block");
@@ -79,9 +78,38 @@ function adicionaZero(numero) {
         return numero;
 }
 
-function getCandidaturas() {
-    $.get(apiBaseUrl + "/candidaturas/porAprovar", (data) => {
+function getCandidaturas(status) {
+    if (!status || (status != "porAprovar" && status != "aprovadas" && status != "rejeitadas")) {
+        status = "porAprovar"
+    }
+    globalStatus = status;
+    $.get(apiBaseUrl + "/candidaturas/" + status, (data) => {
         $("#areaCandidaturas").empty();
+        if (status == "aprovadas") {
+            $("#areaCandidaturas").append(
+                '<div id="botoesStatus" class="botoesStatus">' +
+                '<button id="porAprovar" onclick="getCandidaturas(\'porAprovar\')" type="button" class="btn btn-secondary">Por Aprovar</button>' +
+                '<button id="aprovadas" onclick="getCandidaturas(\'aprovadas\')" type="button" class="btn btn-info">Aprovadas</button>' +
+                '<button id="rejeitadas" onclick="getCandidaturas(\'rejeitadas\')" type="button" class="btn btn-secondary">Rejeitadas</button>' +
+                '</div>'
+            );
+        } else if (status == "rejeitadas") {
+            $("#areaCandidaturas").append(
+                '<div id="botoesStatus" class="botoesStatus">' +
+                '<button id="porAprovar" onclick="getCandidaturas(\'porAprovar\')" type="button" class="btn btn-secondary">Por Aprovar</button>' +
+                '<button id="aprovadas" onclick="getCandidaturas(\'aprovadas\')" type="button" class="btn btn-secondary">Aprovadas</button>' +
+                '<button id="rejeitadas" onclick="getCandidaturas(\'rejeitadas\')" type="button" class="btn btn-info">Rejeitadas</button>' +
+                '</div>'
+            );
+        } else {
+            $("#areaCandidaturas").append(
+                '<div id="botoesStatus" class="botoesStatus">' +
+                '<button id="porAprovar" onclick="getCandidaturas(\'porAprovar\')" type="button" class="btn btn-info">Por Aprovar</button>' +
+                '<button id="aprovadas" onclick="getCandidaturas(\'aprovadas\')" type="button" class="btn btn-secondary">Aprovadas</button>' +
+                '<button id="rejeitadas" onclick="getCandidaturas(\'rejeitadas\')" type="button" class="btn btn-secondary">Rejeitadas</button>' +
+                '</div>'
+            );
+        }
         if (data.length == 0) {
             $("#areaCandidaturas").append("<h4>Sem candidaturas novas...</h4>");
         } else {
@@ -111,12 +139,18 @@ function getCandidaturas() {
                     '</div>' +
                     '<div id="areaDescricao' + contador + '" class="col-md areaDescricao">' +
                     '<span>' + candidatura.descricao + '</span>' +
-                    '<div id="botaoDesaprovar' + contador + '" class="botaoDesaprovar">' +
-                    '<a id="linkBotaoDesaprovar' + contador + '" href="javascript:rejeitarCandidatura(' + contador + ')" class="btn btn-danger">Rejeitar</a>' +
-                    '</div>' +
-                    '<div id="botaoAprovar' + contador + '" class="botaoAprovar">' +
-                    '<a id="linkBotaoAprovar' + contador + '" href="javascript:aprovarCandidatura(' + contador + ')" class="btn btn-success">Aprovar</a>' +
-                    '</div>' +
+                    (status == "aprovadas" ? '<div id="botaoDesaprovar' + contador + '" class="botaoAprovar">' +
+                        '<a id="linkBotaoDesaprovar' + contador + '" href="javascript:rejeitarCandidatura(' + contador + ')" class="btn btn-danger">Rejeitar</a>' +
+                        '</div>' : "") +
+                    (status == "rejeitadas" ? '<div id="botaoAprovar' + contador + '" class="botaoAprovar">' +
+                        '<a id="linkBotaoAprovar' + contador + '" href="javascript:aprovarCandidatura(' + contador + ')" class="btn btn-success">Aprovar</a>' +
+                        '</div>' : "") +
+                    (status == "porAprovar" ? '<div id="botaoDesaprovar' + contador + '" class="botaoDesaprovar">' +
+                        '<a id="linkBotaoDesaprovar' + contador + '" href="javascript:rejeitarCandidatura(' + contador + ')" class="btn btn-danger">Rejeitar</a>' +
+                        '</div>' +
+                        '<div id="botaoAprovar' + contador + '" class="botaoAprovar">' +
+                        '<a id="linkBotaoAprovar' + contador + '" href="javascript:aprovarCandidatura(' + contador + ')" class="btn btn-success">Aprovar</a>' +
+                        '</div>' : '') +
                     '</div>' +
                     '</div>'
                 )

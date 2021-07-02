@@ -112,6 +112,13 @@
     padding: .39rem 1.1rem;
 }
 
+.botoesStatus button {
+    border-radius: 59px;
+    padding: .375rem 1.1rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
 .alert {
     display: none;
     text-align: center;
