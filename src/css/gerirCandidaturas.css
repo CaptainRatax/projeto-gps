@@ -47,6 +47,16 @@
 .textoNumero a {
     color: #367BE2;
     font-size: 18px;
+    /* CSS3 */
+    white-space: pre-wrap;
+    /* Firefox */
+    white-space: -moz-pre-wrap;
+    /* Opera <7 */
+    white-space: -pre-wrap;
+    /* Opera 7 */
+    white-space: -o-pre-wrap;
+    /* IE */
+    word-wrap: break-word;
 }
 
 .textoNome span {
@@ -61,14 +71,32 @@
     font-weight: bold;
 }
 
-.botaoVerMais {
+.botaoDesaprovar {
     padding-top: 10px;
+    margin-top: 25px;
 }
 
-.botaoVerMais a {
+.botaoDesaprovar a {
     float: right;
     border-radius: 59px;
-    padding: .375rem 1.1rem
+    padding: .375rem 1.1rem;
+    position: absolute;
+    right: 120px;
+    bottom: 10px;
+}
+
+.botaoAprovar {
+    padding-top: 10px;
+    margin-top: 25px;
+}
+
+.botaoAprovar a {
+    float: right;
+    border-radius: 59px;
+    padding: .375rem 1.1rem;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 }
 
 .areaDescricao span {
@@ -82,4 +110,16 @@
 .botaoCarregarMais button {
     border-radius: 59px;
     padding: .39rem 1.1rem;
+}
+
+.botoesStatus button {
+    border-radius: 59px;
+    padding: .375rem 1.1rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.alert {
+    display: none;
+    text-align: center;
 }

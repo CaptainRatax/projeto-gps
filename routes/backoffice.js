@@ -32,8 +32,4 @@ router.get('/blog/post', function(req, res) {
     res.sendFile(path.join(dirname + "/public/gerirPost.html"))
 });
 
-router.get('/candidaturas/detalhes', function(req, res) {
-    res.sendFile(path.join(dirname + "/public/detalhesCandidatura.html"))
-});
-
 module.exports = router;
