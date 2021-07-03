@@ -15,6 +15,7 @@ router.post('/novo', async(req, res) => {
         if (verifyUniversidade.length === 0) {
             return res.status(404).send("Não foi encontrada nenhuma universidade com esse id")
         }
+        testemunho.linkYoutube = testemunho.linkYoutube.replace("watch?v=", "embed/")
         var testemunhoGuardado = await testemunho.save()
         res.status(200).send(testemunhoGuardado)
         console.log('Pedido POST de novo testemunho recebido e feito com sucesso')
@@ -103,6 +104,7 @@ router.patch('/alterar', async(req, res) => {
         if (verifyTestemunho.length === 0) {
             return res.status(404).send("Não foi encontrado nenhum testemunho com esse id")
         }
+        testemunho.linkYoutube = testemunho.linkYoutube.replace("watch?v=", "embed/")
         var testemunhoGuardado = await Testemunho.findOneAndUpdate({ _id: req.body._id }, testemunho, { new: true, useFindAndModify: false })
         res.status(200).send(testemunhoGuardado)
         console.log('Pedido Patch de testemunho do site recebido e feito com sucesso')
