@@ -46,3 +46,8 @@
 .containerImagem {
     text-align: center;
 }
+
+.descricao {
+    margin-top: auto;
+    margin-bottom: auto;
+}

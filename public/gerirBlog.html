@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Posts Blog - Administração Brightstart Website</title>
+    <title>Posts testemunhos - Administração Brightstart Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../src/css/stylesheet.css">
     <link rel="stylesheet" href="../src/css/navbar.css">
     <link rel="stylesheet" href="../src/css/sidebar.css">
-    <link rel="stylesheet" href="../src/css/gerirBlog.css">
+    <link rel="stylesheet" href="../src/css/gerirtestemunhos.css">
 </head>
 
 <header>
@@ -32,7 +32,7 @@
                     <a class="nav-link" href="/candidaturas">Candidatura</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/blog">Blog</a>
+                    <a class="nav-link" href="/testemunhos">Testemunhos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contactos">Contactos</a>
@@ -48,7 +48,7 @@
         <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <li><a href="/candidaturas">Candidatura</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li><a href="/testemunhos">Testemunhos</a></li>
             <li><a href="/contactos">Contactos</a></li>
             <li class="active"><a href="/administracao">Área de administrador</a></li>
         </ul>
@@ -62,7 +62,7 @@
             <div class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action bg-light" href="/administracao">Dashboard</a>
                 <a class="list-group-item list-group-item-action bg-light" href="/administracao/candidaturas">Candidaturas</a>
-                <a class="list-group-item list-group-item-action activated bg-light" href="/administracao/blog">Blog</a>
+                <a class="list-group-item list-group-item-action activated bg-light" href="/administracao/testemunhos">Testemunhos</a>
                 <a class="list-group-item list-group-item-action bg-light" href="/administracao/dadosDoSite">Dados do Site</a>
                 <a class="list-group-item list-group-item-action bg-light" href="/administracao/contactos">Contactos</a>
             </div>
@@ -71,11 +71,11 @@
         <div id="page-content-wrapper">
             <button class="btn btn-primary sideBarButton" id="menu-toggle">☰</button>
             <div class="row">
-                <div class="col-lg tituloBlog">
+                <div class="col-lg titulotestemunhos">
                     <span>Posts mais recentes</span>
                 </div>
                 <div class="col-lg botaoAdicionarPost">
-                    <a type="button" class="btn btn-info" href="/administracao/blog/post">
+                    <a type="button" class="btn btn-info" href="/administracao/testemunhos/post">
                         <svg id="add_post_icon" data-name="add post icon" xmlns="http://www.w3.org/2000/svg" width="30.447" height="30.447" viewBox="0 0 30.447 30.447">
                             <path id="Caminho_add_post_icon" data-name="Caminho add post icon" d="M18.078,0H3.489A3.487,3.487,0,0,0,0,3.489V23.153a3.487,3.487,0,0,0,3.489,3.489h8.36a11.077,11.077,0,0,1-1.066-4.757,10.964,10.964,0,0,1,.8-4.136.67.67,0,0,1-.165.013H5.075a1.269,1.269,0,0,1,0-2.537h6.343a1.254,1.254,0,0,1,1.116.685,11.2,11.2,0,0,1,3.146-3.222H5.075a1.269,1.269,0,0,1,0-2.537H16.492a1.272,1.272,0,0,1,1.269,1.269.67.67,0,0,1-.013.165,10.631,10.631,0,0,1,3.819-.787V3.489A3.487,3.487,0,0,0,18.078,0ZM10.149,7.612H5.075a1.269,1.269,0,1,1,0-2.537h5.075a1.269,1.269,0,0,1,0,2.537Z" fill="#fff"/>
                             <path id="Caminho_add_post" data-name="Caminho add post" d="M19.063,10.5a8.563,8.563,0,1,0,8.563,8.563A8.573,8.573,0,0,0,19.063,10.5Zm3.489,9.832h-2.22v2.22a1.269,1.269,0,1,1-2.537,0v-2.22h-2.22a1.269,1.269,0,1,1,0-2.537h2.22v-2.22a1.269,1.269,0,0,1,2.537,0v2.22h2.22a1.269,1.269,0,1,1,0,2.537Z" transform="translate(2.821 2.821)" fill="#fff"/>
@@ -96,7 +96,7 @@
                                 </button>
                             </div>
                             <div class="botaoEditarPost">
-                                <a type="button" class="btn btn-info" href="/administracao/blog/post">
+                                <a type="button" class="btn btn-info" href="/administracao/testemunhos/post">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24.606 27.456">
                                         <path id="União_10" data-name="União 10" d="M-8400.808,661.358a1.074,1.074,0,0,1-.26-1.06l1.284-4.221a1.075,1.075,0,0,1,.268-.448l5.889-5.876a3.217,3.217,0,0,1,4.548,0,3.218,3.218,0,0,1,0,4.55l-5.874,5.863a1.058,1.058,0,0,1-.473.274l-4.328,1.2a1.015,1.015,0,0,1-.287.04A1.067,1.067,0,0,1-8400.808,661.358Zm3-4.4-.638,2.1,2.177-.6,3.95-3.942-1.516-1.518Zm5.7-5.686-.206.207L-8390.8,653l.209-.207a1.075,1.075,0,0,0,0-1.516,1.068,1.068,0,0,0-.758-.314A1.07,1.07,0,0,0-8392.111,651.273Zm-16.341,10.411a4.3,4.3,0,0,1-4.291-4.29V638.518a4.3,4.3,0,0,1,4.291-4.29h13.185a4.3,4.3,0,0,1,4.29,4.29v6.6a1.074,1.074,0,0,1-1.074,1.073,1.072,1.072,0,0,1-1.07-1.073v-6.6a2.148,2.148,0,0,0-2.146-2.145h-13.185a2.148,2.148,0,0,0-2.146,2.145v18.875a2.148,2.148,0,0,0,2.146,2.145h3.587a1.071,1.071,0,0,1,1.07,1.073,1.072,1.072,0,0,1-1.07,1.073Zm1.065-10.3a1.073,1.073,0,0,1-1.072-1.073,1.072,1.072,0,0,1,1.072-1.07h6.708a1.07,1.07,0,0,1,1.072,1.07,1.071,1.071,0,0,1-1.072,1.073Zm0-4.288a1.074,1.074,0,0,1-1.072-1.073,1.073,1.073,0,0,1,1.072-1.073h11.047a1.073,1.073,0,0,1,1.072,1.073,1.074,1.074,0,0,1-1.072,1.073Zm0-4.29a1.074,1.074,0,0,1-1.072-1.073,1.073,1.073,0,0,1,1.072-1.073h11.047a1.073,1.073,0,0,1,1.072,1.073,1.074,1.074,0,0,1-1.072,1.073Z" transform="translate(8412.743 -634.228)" fill="#ffffff"/>
                                       </svg> Editar Post
@@ -113,7 +113,7 @@
                             <span>Todos os alunos do Brightstart Viseu tiveram a oportunidade de fazer as certificações da respetiva área em que se encontram. Mais um passo para um mundo de trabalho.</span>
                         </div>
                         <div class="linkLerMais">
-                            <a href="/administracao/blog/post">Ler mais</a>
+                            <a href="/administracao/testemunhos/post">Ler mais</a>
                         </div>
                     </div>
                     <div class="col-md-5 containerImagem">
@@ -135,7 +135,7 @@
                                 </button>
                             </div>
                             <div class="botaoEditarPost">
-                                <a type="button" class="btn btn-info" href="/administracao/blog/post">
+                                <a type="button" class="btn btn-info" href="/administracao/testemunhos/post">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24.606 27.456">
                                         <path id="União_10" data-name="União 10" d="M-8400.808,661.358a1.074,1.074,0,0,1-.26-1.06l1.284-4.221a1.075,1.075,0,0,1,.268-.448l5.889-5.876a3.217,3.217,0,0,1,4.548,0,3.218,3.218,0,0,1,0,4.55l-5.874,5.863a1.058,1.058,0,0,1-.473.274l-4.328,1.2a1.015,1.015,0,0,1-.287.04A1.067,1.067,0,0,1-8400.808,661.358Zm3-4.4-.638,2.1,2.177-.6,3.95-3.942-1.516-1.518Zm5.7-5.686-.206.207L-8390.8,653l.209-.207a1.075,1.075,0,0,0,0-1.516,1.068,1.068,0,0,0-.758-.314A1.07,1.07,0,0,0-8392.111,651.273Zm-16.341,10.411a4.3,4.3,0,0,1-4.291-4.29V638.518a4.3,4.3,0,0,1,4.291-4.29h13.185a4.3,4.3,0,0,1,4.29,4.29v6.6a1.074,1.074,0,0,1-1.074,1.073,1.072,1.072,0,0,1-1.07-1.073v-6.6a2.148,2.148,0,0,0-2.146-2.145h-13.185a2.148,2.148,0,0,0-2.146,2.145v18.875a2.148,2.148,0,0,0,2.146,2.145h3.587a1.071,1.071,0,0,1,1.07,1.073,1.072,1.072,0,0,1-1.07,1.073Zm1.065-10.3a1.073,1.073,0,0,1-1.072-1.073,1.072,1.072,0,0,1,1.072-1.07h6.708a1.07,1.07,0,0,1,1.072,1.07,1.071,1.071,0,0,1-1.072,1.073Zm0-4.288a1.074,1.074,0,0,1-1.072-1.073,1.073,1.073,0,0,1,1.072-1.073h11.047a1.073,1.073,0,0,1,1.072,1.073,1.074,1.074,0,0,1-1.072,1.073Zm0-4.29a1.074,1.074,0,0,1-1.072-1.073,1.073,1.073,0,0,1,1.072-1.073h11.047a1.073,1.073,0,0,1,1.072,1.073,1.074,1.074,0,0,1-1.072,1.073Z" transform="translate(8412.743 -634.228)" fill="#ffffff"/>
                                       </svg> Editar Post
@@ -152,7 +152,7 @@
                             <span>No contexto da epidemia causada pelo novo coronavírus COVID-19, a ESTGV em colaboração com o IPV, ativou um Plano de Contingência.</span>
                         </div>
                         <div class="linkLerMais">
-                            <a href="/administracao/blog/post">Ler mais</a>
+                            <a href="/administracao/testemunhos/post">Ler mais</a>
                         </div>
                     </div>
                     <div class="col-md-5 containerImagem">
@@ -174,7 +174,7 @@
                                 </button>
                             </div>
                             <div class="botaoEditarPost">
-                                <a type="button" class="btn btn-info" href="/administracao/blog/post">
+                                <a type="button" class="btn btn-info" href="/administracao/testemunhos/post">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24.606 27.456">
                                         <path id="União_10" data-name="União 10" d="M-8400.808,661.358a1.074,1.074,0,0,1-.26-1.06l1.284-4.221a1.075,1.075,0,0,1,.268-.448l5.889-5.876a3.217,3.217,0,0,1,4.548,0,3.218,3.218,0,0,1,0,4.55l-5.874,5.863a1.058,1.058,0,0,1-.473.274l-4.328,1.2a1.015,1.015,0,0,1-.287.04A1.067,1.067,0,0,1-8400.808,661.358Zm3-4.4-.638,2.1,2.177-.6,3.95-3.942-1.516-1.518Zm5.7-5.686-.206.207L-8390.8,653l.209-.207a1.075,1.075,0,0,0,0-1.516,1.068,1.068,0,0,0-.758-.314A1.07,1.07,0,0,0-8392.111,651.273Zm-16.341,10.411a4.3,4.3,0,0,1-4.291-4.29V638.518a4.3,4.3,0,0,1,4.291-4.29h13.185a4.3,4.3,0,0,1,4.29,4.29v6.6a1.074,1.074,0,0,1-1.074,1.073,1.072,1.072,0,0,1-1.07-1.073v-6.6a2.148,2.148,0,0,0-2.146-2.145h-13.185a2.148,2.148,0,0,0-2.146,2.145v18.875a2.148,2.148,0,0,0,2.146,2.145h3.587a1.071,1.071,0,0,1,1.07,1.073,1.072,1.072,0,0,1-1.07,1.073Zm1.065-10.3a1.073,1.073,0,0,1-1.072-1.073,1.072,1.072,0,0,1,1.072-1.07h6.708a1.07,1.07,0,0,1,1.072,1.07,1.071,1.071,0,0,1-1.072,1.073Zm0-4.288a1.074,1.074,0,0,1-1.072-1.073,1.073,1.073,0,0,1,1.072-1.073h11.047a1.073,1.073,0,0,1,1.072,1.073,1.074,1.074,0,0,1-1.072,1.073Zm0-4.29a1.074,1.074,0,0,1-1.072-1.073,1.073,1.073,0,0,1,1.072-1.073h11.047a1.073,1.073,0,0,1,1.072,1.073,1.074,1.074,0,0,1-1.072,1.073Z" transform="translate(8412.743 -634.228)" fill="#ffffff"/>
                                       </svg> Editar Post
@@ -191,7 +191,7 @@
                             <span>No dia 15 de Novembro vai-se realizar uma Webinar de Transformação Digital e Low-Code por parte da Outsystems. A participação é gratuita e aberta ao público!</span>
                         </div>
                         <div class="linkLerMais">
-                            <a href="/administracao/blog/post">Ler mais</a>
+                            <a href="/administracao/testemunhos/post">Ler mais</a>
                         </div>
                     </div>
                     <div class="col-md-5 containerImagem">
