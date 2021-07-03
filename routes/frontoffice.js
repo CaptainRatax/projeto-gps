@@ -8,8 +8,8 @@ router.get('/candidaturas', function(req, res) {
     res.sendFile(path.join(dirname + "/public/candidatura.html"))
 });
 
-router.get('/blog', function(req, res) {
-    res.sendFile(path.join(dirname + "/public/blog.html"))
+router.get('/testemunhos', function(req, res) {
+    res.sendFile(path.join(dirname + "/public/testemunhos.html"))
 });
 
 router.get('/contactos', function(req, res) {
