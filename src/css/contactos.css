@@ -9,7 +9,7 @@
 }
 
 .row.conteudoContactos {
-    margin-top: 50px;
+    margin-top: 80px;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -35,4 +35,9 @@
 
 .areaMorada .moradaContactos {
     float: right;
+}
+
+.divPolitecnicos {
+    float: right;
+    margin-right: 10%;
 }
