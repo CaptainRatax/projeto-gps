@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Candidaturas - Administração Brightstart Website</title>
+    <title>Testemunho - Administração Brightstart Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../src/css/stylesheet.css">
     <link rel="stylesheet" href="../src/css/navbar.css">
     <link rel="stylesheet" href="../src/css/sidebar.css">
-    <link rel="stylesheet" href="../src/css/gerirTestemunhos.css">
+    <link rel="stylesheet" href="../src/css/novoTestemunho.css">
 </head>
 
 <header>
@@ -54,14 +54,14 @@
             <li><a href="/testemunhos">Testemunhos</a></li>
             <li><a href="/contactos">Contactos</a></li>
             <li><a href="/faq">FAQ</a></li>
-            <li class="active"><a href="/administracao">Área de adimistrador</a></li>
+            <li class="active"><a href="/administracao">Área de administrador</a></li>
         </ul>
     </nav>
     <div class="success alert alert-success" role="alert">
-        Testemunho adicionado com sucesso!!
+        Dados guardados com sucesso!
     </div>
     <div class="error alert alert-danger" role="alert">
-        Ocurreu algum erro ao carregar o testemunho. Por favor tente mais tarde.
+        Ocurreu algum erro a tentar guardar os dados. Por favor tente mais tarde.
     </div>
 </header>
 
@@ -70,7 +70,7 @@
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action bg-light" href="/administracao">Dashboard</a>
+                <a class="list-group-item list-group-item-action bg-light" href="/administracao/">Dashboard</a>
                 <a class="list-group-item list-group-item-action bg-light" href="/administracao/candidaturas">Candidaturas</a>
                 <a class="list-group-item list-group-item-action activated bg-light" href="/administracao/testemunhos">Testemunhos</a>
                 <a class="list-group-item list-group-item-action bg-light" href="/administracao/dadosDoSite">Dados do Site</a>
@@ -81,12 +81,34 @@
         <div id="page-content-wrapper">
             <button class="btn btn-primary sideBarButton" id="menu-toggle">☰</button>
             <div class="container-fluid">
-                <div class="tituloTestemunhos">
-                    <span>Testemunhos</span>
-                    <button onclick="abrirNovoTestemunho()" type="button" class="btn btn-primary novoTestemunho">Novo Testemunnho</button>
+                <div class="tituloDadosSite">
+                    <span>Adicionar Testemunho</span>
                 </div>
-                <div id="testemunhos" class="areaTestemunhos">
+                <div class="conteudoInputs">
+                    <div class="divPolitecnicos">
+                        <label for="politecnicos" style="font-weight: bold;">Politécnico</label>
+                        <select name="selector" id="politecnicos" class="form-control" aria-label="Default select example">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label id="labelEstudante" class="fieldsTitle" for="Estudante">Estudante</label>
+                        <input type="text" class="form-control" id="Estudante" placeholder="Inserir nome do estudante" value="">
+                    </div>
 
+                    <div class="form-group">
+                        <label id="labelYoutubeLink" class="fieldsTitle" for="YoutubeLink">Youtube Link</label>
+                        <input type="text" class="form-control" id="YoutubeLink" placeholder="Inserir link do vídeo" value="">
+                    </div>
+
+                    <div class="form-group">
+                        <label id="labelDescricao" class="fieldsTitle" for="Descricao">Descrição</label>
+                        <textarea class="form-control" id="Descricao" rows="5">
+
+                        </textarea>
+                    </div>
+                    <div class="botaoGuardar">
+                        <button onclick="guardar()" type="button" class="btn btn-info">Guardar</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -98,4 +120,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../src/js/sidebar.js"></script>
-<script src="../src/js/gerirTestemunhos.js"></script>
+<script src="../src/js/novoTestemunho.js"></script>

@@ -25,6 +25,11 @@ function adicionaZero(numero) {
         return numero;
 }
 
+function abrirNovoTestemunho() {
+    localStorage.setItem('novoTestemunho', "");
+    window.location.href = "/administracao/testemunho";
+}
+
 function getTestemunhos() {
     $.get(apiBaseUrl + '/testemunhos', (data) => {
         $("#testemunhos").empty();
@@ -43,10 +48,10 @@ function getTestemunhos() {
                         '</div>' +
                         '<div class="col-md-8">' +
                         '<h3>' + testemunho.nomePessoa + '</h3>' +
-                        '<h5>' + testemunho.descricao + '</h5>' +
+                        '<h5 class="descricao">' + testemunho.descricao + '</h5>' +
                         '</div>' +
                         '<div class="col-md-2 icons">' +
-                        '<img class="edit" src="https://img.icons8.com/material-outlined/24/4a90e2/edit--v1.png" />' +
+                        '<img  class="edit" src="https://img.icons8.com/material-outlined/24/4a90e2/edit--v1.png" />' +
                         '<img class="delete" src="https://img.icons8.com/material-outlined/24/4a90e2/trash--v1.png" />' +
                         '</div>' +
                         '</div>'
