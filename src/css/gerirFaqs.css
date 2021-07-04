@@ -1,0 +1,99 @@
+.tituloFaqs {
+    margin-left: 8%;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.areaFaqs {
+    margin-top: 50px;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.itemFaq {
+    padding: 15px;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightgray;
+    margin-bottom: 25px;
+}
+
+.tituloPergunta {
+    float: left;
+    width: 50%;
+}
+
+.tituloResposta {
+    float: right;
+    width: 50%;
+}
+
+.itemFaq {
+    overflow: auto;
+    margin-bottom: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightgrey;
+    border-radius: 20px;
+}
+
+.divInputPergunta,
+.divInputResposta {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.divInputPergunta input::placeholder,
+.divInputResposta textarea::placeholder {
+    font-weight: lighter;
+    color: rgb(196, 196, 196);
+}
+
+.divInputPergunta label,
+.divInputResposta label {
+    font-weight: bold;
+    color: black;
+}
+
+.divInputPergunta input,
+.divInputResposta textarea {
+    font-weight: normal;
+    color: black;
+}
+
+.divBotoes {
+    overflow: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.divBotoes .btn.btn-info {
+    margin-left: 20px;
+    float: left;
+    border-radius: 59px;
+}
+
+.divBotoes .btn.btn-danger {
+    margin-right: 20px;
+    float: right;
+    border-radius: 59px;
+}
+
+.hidden {
+    display: none;
+}
+
+.alert {
+    text-align: center;
+}
+
+.fixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 9999;
+    border-radius: 0px
+}
