@@ -29,44 +29,44 @@
     border-radius: 20px;
 }
 
-.inputTitulo,
-.inputDescricao {
+.divInputTitulo,
+.divInputDescricao {
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.inputTitulo input::placeholder,
-.inputDescricao input::placeholder {
+.divInputTitulo input::placeholder,
+.divInputDescricao input::placeholder {
     font-weight: lighter;
     color: rgb(196, 196, 196);
 }
 
-.inputTitulo label,
-.inputDescricao label {
+.divInputTitulo label,
+.divInputDescricao label {
     font-weight: bold;
     color: black;
 }
 
-.inputTitulo input,
-.inputDescricao input {
+.divInputTitulo input,
+.divInputDescricao input {
     font-weight: normal;
     color: black;
 }
 
-.botoes {
+.divBotoes {
     overflow: auto;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.botoes .btn.btn-info {
+.divBotoes .btn.btn-info {
     margin-left: 20px;
     float: left;
     border-radius: 59px;
 }
 
-.botoes .btn.btn-danger {
+.divBotoes .btn.btn-danger {
     margin-right: 20px;
     float: right;
     border-radius: 59px;
@@ -107,4 +107,27 @@
 .areaCordenadas .col-md-2 button {
     border-radius: 59px;
     float: right;
+}
+
+.divPolitecnicos {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.alert {
+    text-align: center;
+}
+
+.fixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 9999;
+    border-radius: 0px
 }
