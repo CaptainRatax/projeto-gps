@@ -16,6 +16,10 @@ router.get('/candidaturas', function(req, res) {
     res.sendFile(path.join(dirname + "/public/gerirCandidaturas.html"))
 });
 
+router.get('/testemunhos', function(req, res) {
+    res.sendFile(path.join(dirname + "/public/gerirTestemunhos.html"))
+});
+
 router.get('/blog', function(req, res) {
     res.sendFile(path.join(dirname + "/public/gerirBlog.html"))
 });
