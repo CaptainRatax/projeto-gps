@@ -16,4 +16,7 @@ router.get('/contactos', function(req, res) {
     res.sendFile(path.join(dirname + "/public/contactos.html"))
 });
 
+router.get('/faq', function(req, res) {
+    res.sendFile(path.join(dirname + "/public/faq.html"))
+});
 module.exports = router
