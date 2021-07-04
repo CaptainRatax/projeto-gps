@@ -32,7 +32,7 @@
                     <a class="nav-link" href="/candidaturas">Candidatura</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/blog">Blog</a>
+                    <a class="nav-link" href="/testemunhos">Testemunhos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contactos">Contactos</a>
@@ -48,11 +48,13 @@
         <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <li><a href="/candidaturas">Candidatura</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li><a href="/testemunhos">Testemunhos</a></li>
             <li><a href="/contactos">Contactos</a></li>
             <li class="active"><a href="/administracao">Área de administrador</a></li>
         </ul>
     </nav>
+    <div id="alerts">
+    </div>
 </header>
 
 <body style="font-family: Montserrat;">
@@ -62,7 +64,7 @@
             <div class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action bg-light" href="/administracao">Dashboard</a>
                 <a class="list-group-item list-group-item-action bg-light" href="/administracao/candidaturas">Candidaturas</a>
-                <a class="list-group-item list-group-item-action bg-light" href="/administracao/blog">Blog</a>
+                <a class="list-group-item list-group-item-action bg-light" href="/administracao/testemunhos">Testemunhos</a>
                 <a class="list-group-item list-group-item-action bg-light" href="/administracao/dadosDoSite">Dados do Site</a>
                 <a class="list-group-item list-group-item-action activated bg-light" href="/administracao/contactos">Contactos</a>
             </div>
@@ -80,69 +82,12 @@
                     </select>
                 </div>
                 <div class="row conteudoContactos">
-                    <div class="col-md-6 contactoCampos">
-                        <div class="itemContacto">
-                            <div class="inputTitulo">
-                                <label for="inputtitulo">Título</label>
-                                <input type="text" value="Telefone" class="form-control" id="inputTitulo" placeholder="Título do novo contacto">
-                            </div>
-                            <div class="inputDescricao">
-                                <label for="inputdescricao">Descrição</label>
-                                <input type="text" value="220938432" class="form-control" id="inputdescricao" placeholder="Descrição do novo contacto">
-                            </div>
-                            <div class="botoes">
-                                <button type="button" class="btn btn-danger">Eliminar</button>
-                            </div>
-                        </div>
-                        <div class="itemContacto">
-                            <div class="inputTitulo">
-                                <label for="inputtitulo">Título</label>
-                                <input type="text" value="E-mail" class="form-control" id="inputTitulo" placeholder="Título do novo contacto">
-                            </div>
-                            <div class="inputDescricao">
-                                <label for="inputdescricao">Descrição</label>
-                                <input type="text" value="brightstartviseu@deloitte.pt" class="form-control" id="inputdescricao" placeholder="Descrição do novo contacto">
-                            </div>
-                            <div class="botoes">
-                                <button type="button" class="btn btn-danger">Eliminar</button>
-                            </div>
-                        </div>
-                        <div class="itemContacto">
-                            <div class="inputTitulo">
-                                <label for="inputtitulo">Título</label>
-                                <input type="text" value="Fax" class="form-control" id="inputTitulo" placeholder="Título do novo contacto">
-                            </div>
-                            <div class="inputDescricao">
-                                <label for="inputdescricao">Descrição</label>
-                                <input type="text" value="229039283" class="form-control" id="inputdescricao" placeholder="Descrição do novo contacto">
-                            </div>
-                            <div class="botoes">
-                                <button type="button" class="btn btn-danger">Eliminar</button>
-                            </div>
-                        </div>
-                        <div class="itemContacto">
-                            <div class="inputTitulo">
-                                <label for="inputtitulo">Título</label>
-                                <input type="text" class="form-control" id="inputTitulo" placeholder="Título do novo contacto">
-                            </div>
-                            <div class="inputDescricao">
-                                <label for="inputdescricao">Descrição</label>
-                                <input type="text" class="form-control" id="inputdescricao" placeholder="Descrição do novo contacto">
-                            </div>
-                            <div class="botoes">
-                                <button type="button" class="btn btn-info">Novo</button>
-                                <button type="button" class="btn btn-danger">Eliminar</button>
-                            </div>
-                        </div>
+                    <div id="contactoCampos" class="col-md-6 contactoCampos">
                     </div>
-
                     <div class="col-md-6 contactosMapa">
-
                         <div class="areaDetalhesMorada">
-                            <textarea type="text" class="inputMorada form-control" id="inlineFormInputName2" placeholder="Insira a morada aqui">Av. Cor. José Maria Vale de Andrade
-Campus Politécnico Santa Maria
-3504-510 Viseu</textarea>
-                            <button type="button" class="btn btn-info">Guardar</button>
+                            <textarea class="inputMorada form-control" id="inlineFormInputName2" placeholder="Insira a morada aqui"></textarea>
+                            <button id="botaoGuardarMorada" onclick="guardarMorada()" type="button" class="btn btn-info">Guardar</button>
                         </div>
 
                         <div>
