@@ -16,6 +16,10 @@ router.get('/candidaturas', function(req, res) {
     res.sendFile(path.join(dirname + "/public/gerirCandidaturas.html"))
 });
 
+router.get('/testemunhos', function(req, res) {
+    res.sendFile(path.join(dirname + "/public/gerirTestemunhos.html"))
+});
+
 router.get('/blog', function(req, res) {
     res.sendFile(path.join(dirname + "/public/gerirBlog.html"))
 });
@@ -30,6 +34,10 @@ router.get('/contactos', function(req, res) {
 
 router.get('/blog/post', function(req, res) {
     res.sendFile(path.join(dirname + "/public/gerirPost.html"))
+});
+
+router.get('/faq', function(req, res) {
+    res.sendFile(path.join(dirname + "/public/faq.html"))
 });
 
 module.exports = router;
