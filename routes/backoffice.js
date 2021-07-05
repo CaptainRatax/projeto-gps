@@ -20,6 +20,10 @@ router.get('/testemunhos', function(req, res) {
     res.sendFile(path.join(dirname + "/public/gerirTestemunhos.html"))
 });
 
+router.get('/testemunho', function(req, res) {
+    res.sendFile(path.join(dirname + "/public/novoTestemunho.html"))
+});
+
 router.get('/blog', function(req, res) {
     res.sendFile(path.join(dirname + "/public/gerirBlog.html"))
 });

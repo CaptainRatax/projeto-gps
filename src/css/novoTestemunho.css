@@ -1,0 +1,39 @@
+.fieldsTitle {
+    font-weight: bold;
+}
+
+.tituloDadosSite {
+    display: block;
+    margin-left: 8%;
+    font-size: 35px;
+    font-weight: bold;
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.conteudoInputs {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.botaoGuardar {
+    float: right;
+}
+
+.botaoGuardar button {
+    font-size: 20px;
+    border-radius: 59px;
+}
+
+.alert {
+    text-align: center;
+}
+
+.divPolitecnicos {
+    margin-bottom: 30px;
+}

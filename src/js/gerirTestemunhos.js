@@ -25,6 +25,16 @@ function adicionaZero(numero) {
         return numero;
 }
 
+function abrirNovoTestemunho() {
+    localStorage.setItem('novoTestemunho', "");
+    window.location.href = "/administracao/testemunho";
+}
+
+function editarTestemunho(id) {
+    localStorage.setItem('novoTestemunho', id);
+    window.location.href = "/administracao/testemunho";
+}
+
 function getTestemunhos() {
     $.get(apiBaseUrl + '/testemunhos', (data) => {
         $("#testemunhos").empty();
@@ -35,6 +45,7 @@ function getTestemunhos() {
             data.forEach(testemunho => {
                     let dataTestemunho = new Date(testemunho.data);
                     let dataFormatada = (adicionaZero(dataTestemunho.getDate().toString()) + "/" + (adicionaZero(dataTestemunho.getMonth() + 1).toString()) + "/" + dataTestemunho.getFullYear());
+                    console.log(testemunho)
                     let codigo = testemunho.linkYoutube.split('/')[4];
                     $("#testemunhos").append(
                         '<div class="row">' +
@@ -43,19 +54,60 @@ function getTestemunhos() {
                         '</div>' +
                         '<div class="col-md-8">' +
                         '<h3>' + testemunho.nomePessoa + '</h3>' +
-                        '<h5>' + testemunho.descricao + '</h5>' +
+                        '<h5 class="descricao">' + testemunho.descricao + '</h5>' +
                         '</div>' +
                         '<div class="col-md-2 icons">' +
-                        '<img class="edit" src="https://img.icons8.com/material-outlined/24/4a90e2/edit--v1.png" />' +
-                        '<img class="delete" src="https://img.icons8.com/material-outlined/24/4a90e2/trash--v1.png" />' +
+                        '<img onclick="editarTestemunho(\'' + testemunho._id + '\')" class="edit" src="https://img.icons8.com/material-outlined/24/4a90e2/edit--v1.png" />' +
+                        '<img onclick="apagar(\'' + testemunho._id + '\')"class="delete" src="https://img.icons8.com/material-outlined/24/4a90e2/trash--v1.png" />' +
                         '</div>' +
                         '</div>'
                     )
-
                     contador += 1;
                 }
 
             )
         }
     })
+}
+
+function apagar(id) {
+    var confirmacao = confirm("Tem a certeza de que quer este testemunho?");
+    if (confirmacao) {
+        $.ajax({
+            type: 'DELETE',
+            url: apiBaseUrl + '/testemunhos/eliminar/' + id,
+            data: null,
+            processData: false,
+            contentType: 'application/json',
+            success: function() {
+                getTestemunhos();
+                $(".success").alert('close')
+                $(".error").alert('close')
+                $(".warning").alert('close')
+                $("#alerts").append(
+                    '<div class="success alert alert-success alert-dismissible fade fixed" role="alert">' +
+                    'Testemunho eliminado com sucesso!' +
+                    '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                    '<span aria-hidden="true">&times;</span>' +
+                    '</button>' +
+                    '</div>'
+                );
+                $(".success").addClass("show");
+            },
+            error: function(err) {
+                $(".success").alert('close')
+                $(".error").alert('close')
+                $(".warning").alert('close')
+                $("#alerts").append(
+                    '<div class="error alert alert-danger alert-dismissible fade fixed" role="alert">' +
+                    'Ocurreu algum erro a tentar eliminar o testemunho. Por favor tente mais tarde.' +
+                    '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                    '<span aria-hidden="true">&times;</span>' +
+                    '</button>' +
+                    '</div>'
+                );
+                $(".error").addClass("show");
+            }
+        });
+    }
 }
