@@ -57,11 +57,7 @@
             <li class="active"><a href="/administracao">Área de administrador</a></li>
         </ul>
     </nav>
-    <div class="success alert alert-success" role="alert">
-        Dados guardados com sucesso!
-    </div>
-    <div class="error alert alert-danger" role="alert">
-        Ocurreu algum erro a tentar guardar os dados. Por favor tente mais tarde.
+    <div id="alerts">
     </div>
 </header>
 
@@ -82,7 +78,7 @@
             <button class="btn btn-primary sideBarButton" id="menu-toggle">☰</button>
             <div class="container-fluid">
                 <div class="tituloDadosSite">
-                    <span>Adicionar Testemunho</span>
+                    <span id="titulo"></span>
                 </div>
                 <div class="conteudoInputs">
                     <div class="divPolitecnicos">
@@ -102,11 +98,10 @@
 
                     <div class="form-group">
                         <label id="labelDescricao" class="fieldsTitle" for="Descricao">Descrição</label>
-                        <textarea class="form-control" id="Descricao" rows="5">
-
-                        </textarea>
+                        <textarea class="form-control" id="Descricao" rows="5"></textarea>
                     </div>
                     <div class="botaoGuardar">
+                        <button onclick="cancelar()" type="button" class="btn btn-secondary">Cancelar</button>
                         <button onclick="guardar()" type="button" class="btn btn-info">Guardar</button>
                     </div>
                 </div>
