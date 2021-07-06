@@ -94,7 +94,7 @@ router.post('/verifyToken', async(req, res) => {
                         console.log('Pedido POST de verificar token recebido e não autorizado com sucesso')
                         return res.status(401).send('Email ou Password errados!');
                     } else {
-                        res.status(200).send({ success: true });
+                        res.status(200).send({ user: results[0], success: true });
                         console.log('Pedido POST de verificar token recebido e autorizado com sucesso')
                     }
                 })

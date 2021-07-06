@@ -89,3 +89,13 @@ a.btn.btn-primary.botaoCandidatate {
 .col-md-7.textoSobre {
     margin-top: 60px;
 }
+
+.userInfo {
+    position: fixed;
+    top: -3px;
+    right: 0;
+}
+
+.logoutIcon {
+    width: 5rem;
+}

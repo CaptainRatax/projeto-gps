@@ -41,7 +41,6 @@ function login() {
         email: $("#inputEmail").val(),
         password: SHA1($("#inputPassword").val())
     }
-    console.log(JSON.stringify(dadosLogin))
     $.ajax({
         type: 'POST',
         url: apiBaseUrl + '/login',
@@ -50,6 +49,7 @@ function login() {
         contentType: 'application/json',
         statusCode: {
             200: function(response) {
+                localStorage.setItem('loginToken', response.token);
                 window.location.href = "/administracao";
             },
             401: function(response) {

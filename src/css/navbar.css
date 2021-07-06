@@ -73,3 +73,13 @@
     width: 50px;
     margin-right: 15px;
 }
+
+.userInfo {
+    position: fixed;
+    top: -3px;
+    right: 0;
+}
+
+.logoutIcon {
+    width: 5rem;
+}

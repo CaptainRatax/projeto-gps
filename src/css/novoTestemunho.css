@@ -37,3 +37,13 @@
 .divPolitecnicos {
     margin-bottom: 30px;
 }
+
+.userInfo {
+    position: fixed;
+    top: -3px;
+    right: 0;
+}
+
+.logoutIcon {
+    width: 5rem;
+}
