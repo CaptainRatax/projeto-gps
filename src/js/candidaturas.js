@@ -70,7 +70,7 @@ function getCandidaturasAbertas() {
 }
 
 function submeterCandidatura() {
-    if ($("#inputNome").val() == "" || $("#inputEmail").val() == "" || $("#inputTelemovel").val() == "" || $("#inputEscola").val() == "" || $("#inputEscola").val() == "") {
+    if ($("#inputNome").val() == "" || $("#inputEmail").val() == "" || $("#inputTelemovel").val() == "" || $("#inputEscola").val() == "" || $("#textAreaDescricao").val() == "") {
         $(".warning").css("display", "block");
         $(".success").css("display", "none");
         $(".error").css("display", "none");
@@ -82,14 +82,11 @@ function submeterCandidatura() {
                 email: $("#inputEmail").val(),
                 telemovel: $("#inputTelemovel").val(),
                 escola: $("#inputEscola").val(),
-                descricao: $("#inputEscola").val(),
+                descricao: $("#textAreaDescricao").val(),
                 imagem: "",
                 aprovacao: null,
                 universidade: politecnico
             }
-
-            console.log(JSON.stringify(candidatura));
-
             $.ajax({
                 type: 'POST',
                 url: apiBaseUrl + '/candidaturas/nova',
