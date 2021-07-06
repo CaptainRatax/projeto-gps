@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Candidaturas - Administração Brightstart Website</title>
+    <title>Faqs - Administração Brightstart Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../src/css/stylesheet.css">
     <link rel="stylesheet" href="../src/css/navbar.css">
     <link rel="stylesheet" href="../src/css/sidebar.css">
-    <link rel="stylesheet" href="../src/css/gerirCandidaturas.css">
+    <link rel="stylesheet" href="../src/css/gerirFaqs.css">
 </head>
 
 <header>
@@ -57,11 +57,7 @@
             <li class="active"><a href="/administracao">Área de adimistrador</a></li>
         </ul>
     </nav>
-    <div class="success alert alert-success" role="alert">
-        Candidatura aprovada/rejeitada com sucesso!
-    </div>
-    <div class="error alert alert-danger" role="alert">
-        Ocurreu algum erro a tentar aprovar/rejeitar a candidatura. Por favor tente mais tarde.
+    <div id="alerts">
     </div>
 </header>
 
@@ -70,9 +66,9 @@
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action activated bg-light" href="/administracao/candidaturas">Candidaturas</a>
+                <a class="list-group-item list-group-item-action bg-light" href="/administracao/candidaturas">Candidaturas</a>
                 <a class="list-group-item list-group-item-action bg-light" href="/administracao/testemunhos">Testemunhos</a>
-                <a class="list-group-item list-group-item-action bg-light" href="/administracao/faqs">Faqs</a>
+                <a class="list-group-item list-group-item-action activated bg-light" href="/administracao/faqs">Faqs</a>
                 <a class="list-group-item list-group-item-action bg-light" href="/administracao/dadosDoSite">Dados do Site</a>
                 <a class="list-group-item list-group-item-action bg-light" href="/administracao/contactos">Contactos</a>
             </div>
@@ -81,10 +77,10 @@
         <div id="page-content-wrapper">
             <button class="btn btn-primary sideBarButton" id="menu-toggle">☰</button>
             <div class="container-fluid">
-                <div class="tituloContactos">
-                    <span>Candidaturas mais recentes</span>
+                <div class="tituloFaqs">
+                    <span>Faqs</span>
                 </div>
-                <div id="areaCandidaturas" class="areaCandidaturas">
+                <div id="areaFaqs" class="areaFaqs">
                 </div>
             </div>
         </div>
@@ -96,4 +92,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../src/js/sidebar.js"></script>
-<script src="../src/js/gerirCandidaturas.js"></script>
+<script src="../src/js/gerirFaqs.js"></script>

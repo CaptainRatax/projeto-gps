@@ -61,6 +61,78 @@ router.get('/universidadeid/:id', async(req, res) => {
     }
 })
 
+router.get('/coordenadas/universidadeid/:id', async(req, res) => {
+    try {
+        var ObjectId = mongoose.Types.ObjectId;
+        if (!ObjectId.isValid(req.params.id)) {
+            return res.status(400).send("Esse id não é válido!")
+        }
+        var verifyUniversidade = await Universidade.find({ _id: req.params.id })
+        if (verifyUniversidade.length === 0) {
+            return res.status(404).send("Não foi encontrada nenhuma universidade com esse id")
+        }
+        var contactos = await Contacto.find({ "universidade._id": req.params.id, "chave": "Coordenadas" })
+        res.status(200).send(contactos[0])
+        console.log('Pedido GET de coordenadas por universidade ID recebido e feito com sucesso')
+    } catch (error) {
+        res.status(500).send("Algo correu mal com o pedido")
+        console.log('Pedido GET de coordenadas por universidade ID falhou! Erros:')
+        return console.error(error)
+    }
+})
+
+router.get('/coordenadas/universidadesigla/:sigla', async(req, res) => {
+    try {
+        var universidade = await Universidade.find({ sigla: req.params.sigla })
+        if (universidade.length === 0) {
+            return res.status(404).send("Não foi encontrada nenhuma universidade com essa sigla")
+        }
+        var contactos = await Contacto.find({ "universidade.sigla": req.params.sigla, "chave": "Coordenadas" })
+        res.status(200).send(contactos[0])
+        console.log('Pedido GET de coordenadas por sigla universidade recebido e feito com sucesso')
+    } catch (error) {
+        res.status(500).send("Algo correu mal com o pedido")
+        console.log('Pedido GET de coordenadas por sigla universidade falhou! Erros:')
+        return console.error(error)
+    }
+})
+
+router.get('/morada/universidadeid/:id', async(req, res) => {
+    try {
+        var ObjectId = mongoose.Types.ObjectId;
+        if (!ObjectId.isValid(req.params.id)) {
+            return res.status(400).send("Esse id não é válido!")
+        }
+        var verifyUniversidade = await Universidade.find({ _id: req.params.id })
+        if (verifyUniversidade.length === 0) {
+            return res.status(404).send("Não foi encontrada nenhuma universidade com esse id")
+        }
+        var contactos = await Contacto.find({ "universidade._id": req.params.id, "chave": "Morada" })
+        res.status(200).send(contactos[0])
+        console.log('Pedido GET de morada por universidade ID recebido e feito com sucesso')
+    } catch (error) {
+        res.status(500).send("Algo correu mal com o pedido")
+        console.log('Pedido GET de morada por universidade ID falhou! Erros:')
+        return console.error(error)
+    }
+})
+
+router.get('/morada/universidadesigla/:sigla', async(req, res) => {
+    try {
+        var universidade = await Universidade.find({ sigla: req.params.sigla })
+        if (universidade.length === 0) {
+            return res.status(404).send("Não foi encontrada nenhuma universidade com essa sigla")
+        }
+        var contactos = await Contacto.find({ "universidade.sigla": req.params.sigla, "chave": "Morada" })
+        res.status(200).send(contactos[0])
+        console.log('Pedido GET de morada por sigla universidade recebido e feito com sucesso')
+    } catch (error) {
+        res.status(500).send("Algo correu mal com o pedido")
+        console.log('Pedido GET de morada por sigla universidade falhou! Erros:')
+        return console.error(error)
+    }
+})
+
 router.get('/universidadesigla/:sigla', async(req, res) => {
     try {
         var universidade = await Universidade.find({ sigla: req.params.sigla })

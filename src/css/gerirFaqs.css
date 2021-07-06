@@ -1,26 +1,35 @@
-.tituloContactos {
+.tituloFaqs {
     margin-left: 8%;
     font-size: 35px;
     font-weight: bold;
 }
 
-.row.conteudoContactos {
+.areaFaqs {
     margin-top: 50px;
     margin-left: 8%;
     margin-right: 8%;
 }
 
-.tituloTitulo {
+.itemFaq {
+    padding: 15px;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightgray;
+    margin-bottom: 25px;
+}
+
+.tituloPergunta {
     float: left;
     width: 50%;
 }
 
-.tituloDescricao {
+.tituloResposta {
     float: right;
     width: 50%;
 }
 
-.itemContacto {
+.itemFaq {
     overflow: auto;
     margin-bottom: 30px;
     border-style: solid;
@@ -29,27 +38,27 @@
     border-radius: 20px;
 }
 
-.divInputTitulo,
-.divInputDescricao {
+.divInputPergunta,
+.divInputResposta {
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.divInputTitulo input::placeholder,
-.divInputDescricao input::placeholder {
+.divInputPergunta input::placeholder,
+.divInputResposta textarea::placeholder {
     font-weight: lighter;
     color: rgb(196, 196, 196);
 }
 
-.divInputTitulo label,
-.divInputDescricao label {
+.divInputPergunta label,
+.divInputResposta label {
     font-weight: bold;
     color: black;
 }
 
-.divInputTitulo input,
-.divInputDescricao input {
+.divInputPergunta input,
+.divInputResposta textarea {
     font-weight: normal;
     color: black;
 }
@@ -70,49 +79,6 @@
     margin-right: 20px;
     float: right;
     border-radius: 59px;
-}
-
-.areaDetalhesMorada {
-    overflow: auto;
-    width: 100%;
-    padding-bottom: 30px;
-}
-
-.inputMorada {
-    min-height: 100px;
-    width: 100% !important;
-}
-
-.areaDetalhesMorada button {
-    margin-top: 10px;
-    margin-right: 10px;
-    border-radius: 59px;
-    float: right;
-}
-
-.areaCordenadas {
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 5px;
-}
-
-.areaCordenadas .col-md-10 {
-    padding-top: 5px;
-}
-
-.areaCordenadas .col-md-2 {
-    padding-top: 5px;
-}
-
-.areaCordenadas .col-md-2 button {
-    border-radius: 59px;
-    float: right;
-}
-
-.divPolitecnicos {
-    margin-left: 8%;
-    margin-right: 8%;
-    margin-bottom: 10px;
 }
 
 .hidden {

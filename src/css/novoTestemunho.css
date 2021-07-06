@@ -31,8 +31,11 @@
 }
 
 .alert {
-    display: none;
     text-align: center;
+}
+
+.divPolitecnicos {
+    margin-bottom: 30px;
 }
 
 .userInfo {

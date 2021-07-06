@@ -1,12 +1,13 @@
 var apiBaseUrl;
 $(() => {
     getAPIUrl();
-    getDadosHomePage();
+    faq();
+    getFaq();
     getAuthorization();
 })
 
-async function getAPIUrl() {
-    var file = "./apiBaseUrl.txt"
+function getAPIUrl() {
+    var file = "../../apiBaseUrl.txt"
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
     rawFile.onreadystatechange = function() {
@@ -17,17 +18,6 @@ async function getAPIUrl() {
         }
     }
     rawFile.send(null);
-}
-
-function getDadosHomePage() {
-    $.get(apiBaseUrl + '/dadossite', (data) => {
-        $("#tituloHomePage").text(data[0].valor)
-        $("#subtituloHomePage").text(data[1].valor)
-        $("#tituloSobreHome").text(data[2].valor)
-        var auxData = data[3].valor.replaceAll("\n", "<br>")
-        $("#textoSobre").text("")
-        $("#textoSobre").append(auxData)
-    })
 }
 
 function getAuthorization() {
@@ -62,4 +52,41 @@ function getAuthorization() {
             }
         });
     }
+}
+
+function faq() {
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("activated");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+}
+
+function getFaq() {
+    $.get(apiBaseUrl + '/faqs', (data) => {
+        $("#Faqs").empty();
+        if (data.length == 0) {
+            $("#Faqs").append("<h2>Não existe nenhuma FAQ para apresentar</h2>");
+        } else {
+            data.forEach(faq => {
+                console.log(faq)
+                $("#Faqs").append(
+                    '<button class="accordion">' + faq.pergunta + '</button>' +
+                    '<div class="panel">' +
+                    '<p>' + faq.resposta + '</p>' +
+                    '</div>'
+                )
+            })
+        }
+        faq();
+    })
 }

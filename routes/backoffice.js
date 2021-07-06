@@ -9,15 +9,19 @@ router.get('/login', function(req, res) {
 });
 
 router.get('/', function(req, res) {
-    res.sendFile(path.join(dirname + "/public/dashboard.html"))
+    res.redirect('/administracao/candidaturas');
 });
 
 router.get('/candidaturas', function(req, res) {
     res.sendFile(path.join(dirname + "/public/gerirCandidaturas.html"))
 });
 
-router.get('/blog', function(req, res) {
-    res.sendFile(path.join(dirname + "/public/gerirBlog.html"))
+router.get('/testemunhos', function(req, res) {
+    res.sendFile(path.join(dirname + "/public/gerirTestemunhos.html"))
+});
+
+router.get('/testemunho', function(req, res) {
+    res.sendFile(path.join(dirname + "/public/novoTestemunho.html"))
 });
 
 router.get('/dadosDoSite', function(req, res) {
@@ -28,12 +32,8 @@ router.get('/contactos', function(req, res) {
     res.sendFile(path.join(dirname + "/public/gerirContactos.html"))
 });
 
-router.get('/blog/post', function(req, res) {
-    res.sendFile(path.join(dirname + "/public/gerirPost.html"))
-});
-
-router.get('/candidaturas/detalhes', function(req, res) {
-    res.sendFile(path.join(dirname + "/public/detalhesCandidatura.html"))
+router.get('/faqs', function(req, res) {
+    res.sendFile(path.join(dirname + "/public/gerirFaqs.html"))
 });
 
 module.exports = router;

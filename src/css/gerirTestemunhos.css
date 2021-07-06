@@ -1,0 +1,63 @@
+.alert {
+    text-align: center;
+}
+
+.tituloTestemunhos {
+    margin-left: 8%;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.novoTestemunho {
+    float: right;
+    margin-right: 10%;
+    border-radius: 50px;
+}
+
+.thumbnail {
+    width: 150px;
+}
+
+.areaTestemunhos {
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.edit,
+.delete {
+    width: 36px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.icons {
+    align-self: center;
+    text-align: center;
+}
+
+.row {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: solid 2px gainsboro;
+    border-radius: 15px;
+}
+
+.descricao {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.userInfo {
+    position: fixed;
+    top: -3px;
+    right: 0;
+}
+
+.logoutIcon {
+    width: 5rem;
+}

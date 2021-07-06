@@ -1,7 +1,6 @@
 var apiBaseUrl;
 $(() => {
     getAPIUrl();
-    getDadosHomePage();
     getAuthorization();
 })
 
@@ -17,17 +16,6 @@ async function getAPIUrl() {
         }
     }
     rawFile.send(null);
-}
-
-function getDadosHomePage() {
-    $.get(apiBaseUrl + '/dadossite', (data) => {
-        $("#tituloHomePage").text(data[0].valor)
-        $("#subtituloHomePage").text(data[1].valor)
-        $("#tituloSobreHome").text(data[2].valor)
-        var auxData = data[3].valor.replaceAll("\n", "<br>")
-        $("#textoSobre").text("")
-        $("#textoSobre").append(auxData)
-    })
 }
 
 function getAuthorization() {
