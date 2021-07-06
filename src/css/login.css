@@ -70,6 +70,20 @@ body {
 }
 
 .login_btn {
+    margin-top: 20px;
     border-radius: 59px;
     width: 100px;
+}
+
+.alert {
+    text-align: center;
+}
+
+.fixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 9999;
+    border-radius: 0px
 }
