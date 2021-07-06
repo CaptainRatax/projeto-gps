@@ -1,12 +1,11 @@
 var apiBaseUrl;
-$(() => {
+$(async() => {
     getAPIUrl();
-    getDadosHomePage();
     getAuthorization();
 })
 
 async function getAPIUrl() {
-    var file = "./apiBaseUrl.txt"
+    var file = "../../apiBaseUrl.txt"
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
     rawFile.onreadystatechange = function() {
@@ -17,17 +16,6 @@ async function getAPIUrl() {
         }
     }
     rawFile.send(null);
-}
-
-function getDadosHomePage() {
-    $.get(apiBaseUrl + '/dadossite', (data) => {
-        $("#tituloHomePage").text(data[0].valor)
-        $("#subtituloHomePage").text(data[1].valor)
-        $("#tituloSobreHome").text(data[2].valor)
-        var auxData = data[3].valor.replaceAll("\n", "<br>")
-        $("#textoSobre").text("")
-        $("#textoSobre").append(auxData)
-    })
 }
 
 function getAuthorization() {
@@ -46,20 +34,32 @@ function getAuthorization() {
                     if (response.success) {
                         var nome = response.user.nome.split(" ");
                         $("#navbarHere").append(
-                            '<li class="nav-item">' +
-                            '<a class="nav-link" href="/administracao">Área de administrador</a>' +
-                            '</li>' +
                             '<li class="nav-item userInfo">' +
                             '<a class="nav-link">' + nome[0] + ' ' + nome[nome.length - 1] + '</a>' +
-                            '<a href="javascript:localStorage.setItem(\'loginToken\', \'\'); window.location.href = \'/\';"><img class="logoutIcon" src="./src/Images/logout.svg"></a>' +
+                            '<a href="javascript:localStorage.setItem(\'loginToken\', \'\'); window.location.href = \'/\';"><img class="logoutIcon" src="../src/Images/logout.svg"></a>' +
                             '</li>'
                         )
-                        $("#navbarHere2").append(
-                            '<li><a href="/administracao">Área de adimistrador</a></li>'
-                        )
+                    } else {
+                        localStorage.setItem('loginToken', "");
+                        window.location.href = "/administracao/login";
                     }
+                },
+                401: function(response) {
+                    localStorage.setItem('loginToken', "");
+                    window.location.href = "/administracao/login";
+                },
+                400: function(response) {
+                    localStorage.setItem('loginToken', "");
+                    window.location.href = "/administracao/login";
+                },
+                500: function(response) {
+                    localStorage.setItem('loginToken', "");
+                    window.location.href = "/administracao/login";
                 }
             }
         });
+    } else {
+        localStorage.setItem('loginToken', "");
+        window.location.href = "/administracao/login";
     }
 }

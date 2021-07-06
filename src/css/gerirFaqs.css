@@ -97,3 +97,13 @@
     z-index: 9999;
     border-radius: 0px
 }
+
+.userInfo {
+    position: fixed;
+    top: -3px;
+    right: 0;
+}
+
+.logoutIcon {
+    width: 5rem;
+}

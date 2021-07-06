@@ -123,3 +123,13 @@
     display: none;
     text-align: center;
 }
+
+.userInfo {
+    position: fixed;
+    top: -3px;
+    right: 0;
+}
+
+.logoutIcon {
+    width: 5rem;
+}
